@@ -139,15 +139,70 @@
             .listing-container {
                 grid-template-columns: 1fr;
             }
-        }
+        }.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner-image img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.banner-text {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.banner-text h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 16px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner-text {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .banner-image img {
+        max-width: 150px;
+    }
+}
+
     </style>
 </head>
 <body>
-
+    <div class="banner">
+        <div class="banner-image">
+            <img src="https://vanrental.pl/wp-content/uploads/2024/12/logo-1-e1679045923156-300x140.png" alt="Banner Image">
+        </div>
+        <div class="banner-text">
+            <h1>Discover Luxury and Affordable Van Rentals in Dubai</h1>
+            <p>Call or WhatsApp us today to book your van and make your trip unforgettable!</p>
+        </div>
+    </div>
+    
     <div class="container">
-        <img src="https://vanrental.pl/wp-content/uploads/2024/12/logo-1-e1679045923156-300x140.png" alt="Van Rental Logo" class="logo">
-        <div class="header">Van Rental in Dubai</div>
-        
         <div class="listing-container">
             <div class="listing-item">
                 <img src="https://runwaybusrental.com/wp-content/uploads/2023/12/hiace-toyota-12-seater-rental-in-dubai.webp" alt="Luxury Van">
