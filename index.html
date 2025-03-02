@@ -3,340 +3,636 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Affordable and luxury van rental options in Dubai. Rent a van for daily or long-term use at competitive prices. Call or WhatsApp now!">
-    <meta name="keywords" content="Van Rental, Dubai Van Hire, Toyota Hiace, Nissan NV350, Rent Van Dubai, Family Van, Dubai Rentals">
-    <meta name="author" content="Your Company Name">
-    <meta property="og:title" content="Van Rental in Dubai - Affordable & Luxury Vans for Rent">
-    <meta property="og:description" content="Discover the best van rental services in Dubai. Rent a luxury or economy van with competitive prices. Get in touch now!">
-    <meta property="og:image" content="https://your-logo-url.com/logo.png">
-    <meta property="og:url" content="https://www.yourwebsite.com">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" href="https://your-logo-url.com/favicon.ico" type="image/x-icon">
-    <title>Van Rental in Dubai</title>
-    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-933986507"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-933986507'); </script>
-<!-- Event snippet for Website sale conversion page --> <script> gtag('event', 'conversion', { 'send_to': 'AW-933986507/JQaGCL2gm4MaEMuBrr0D', 'transaction_id': '' }); </script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <title>Dubai Van Rental Service | Best Van Rental Rates in UAE</title>
+    <meta name="description" content="Dubai's premier van rental service. ✓ Toyota Hiace ✓ Nissan NV350 ✓ Daily & Monthly Rates ✓ Free Delivery ✓ 24/7 Support. Book your van rental today!">
+    <meta name="keywords" content="van rental Dubai, Toyota Hiace rental, Nissan NV350 rental, van hire UAE, monthly van rental Dubai, Dubai van rental service">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Dubai Van Rental Service | Best Van Rental Rates in UAE">
+    <meta property="og:description" content="Rent vans in Dubai with free delivery and 24/7 support. Choose from our fleet of Toyota Hiace and Nissan NV350 vans.">
+    <meta property="og:image" content="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp">
+    <meta property="og:url" content="https://dubaivansrental.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dubai Van Rental Service">
+    <meta name="twitter:description" content="Best van rental rates in Dubai. Toyota Hiace and Nissan NV350 available for daily and monthly rental.">
+    <meta name="twitter:image" content="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dubaivansrental.com">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
 
-  gtag('config', 'AW-933986507');
-</script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67a488923a842732607a781d/1ijdbavt0';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
-        .container {
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), #1a4f7c);
+            color: white;
+            padding: 4rem 1rem;
             text-align: center;
-            background-color: #fff;
-            padding: 40px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .vehicles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .vehicle-card {
+            background: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .vehicle-card img {
             width: 100%;
-            max-width: 1200px;
+            height: 200px;
+            object-fit: cover;
         }
-        .header {
-            font-size: 32px;
-            color: #333;
-            margin-bottom: 20px;
+
+        .vehicle-card h2 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin: 1rem 1.5rem 0.5rem;
+            font-weight: 600;
         }
-        .logo {
-            max-width: 200px;
-            margin-bottom: 30px;
+
+        .vehicle-card .price {
+            font-size: 1.1rem;
+            margin: 0 1.5rem 0.25rem;
+            font-weight: 500;
         }
-        .listing-container {
+
+        .vehicle-card .features {
+            margin: 1rem 1.5rem;
+            padding-left: 1.25rem;
+            list-style: none;
+        }
+
+        .vehicle-card .features li {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .vehicle-card .features li::before {
+            content: "✓";
+            color: #27ae60;
+            position: absolute;
+            left: -1.25rem;
+            font-weight: bold;
+        }
+
+        .vehicle-card .cta-buttons {
+            margin: auto 1.5rem 1.5rem;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 20px;
-            padding-right: 15px;
-        }
-        .listing-item {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .listing-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-        .listing-item h3 {
-            font-size: 24px;
-            color: #333;
-        }
-        .listing-item p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .listing-item .details {
-            font-size: 14px;
-            color: #888;
-            margin-bottom: 15px;
-        }
-        .whatsapp-logo {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            margin-right: 10px;
-        }
-        .whatsapp-button {
-            display: inline-flex;
-            align-items: center;
-            background-color: #25D366;
-            color: #fff;
-            padding: 8px 15px;
-            font-size: 16px;
-            border-radius: 25px;
-            text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .whatsapp-button:hover {
-            background-color: #128C7E;
-        }
-        .call-button {
-            display: inline-flex;
-            align-items: center;
-            background-color: #34b7f1;
-            color: white;
-            padding: 8px 15px;
-            font-size: 16px;
-            border-radius: 25px;
-            text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 10px;
-        }
-        .call-button:hover {
-            background-color: #007bb5;
+            gap: 0.5rem;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .listing-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .vehicle-card .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            color: white;
+            gap: 0.5rem;
         }
-        @media (max-width: 480px) {
-            .listing-container {
+
+        .vehicle-card .cta:first-child {
+            background: #2c3e50;
+        }
+
+        .vehicle-card .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .vehicle-card .call-btn {
+            background: #007bff;
+        }
+
+        .vehicle-card .cta:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .vehicle-card .whatsapp-icon,
+        .vehicle-card .phone-icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .vehicles-grid {
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .vehicle-card .cta-buttons {
                 grid-template-columns: 1fr;
             }
-        }.banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.banner-image img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 8px;
-}
+            .vehicle-card .cta {
+                padding: 0.8rem 1rem;
+            }
+        }
 
-.banner-text {
-    flex: 1;
-    margin-left: 20px;
-}
-
-.banner-text h1 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.banner-text p {
-    font-size: 16px;
-    color: #666;
-}
-
-@media (max-width: 768px) {
-    .banner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .banner-text {
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
-    .banner-image img {
-        max-width: 150px;
-    }
-}
-
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .vehicle-card .cta-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="banner">
-        <div class="banner-image">
-            <img src="https://vanrental.pl/wp-content/uploads/2024/12/logo-1-e1679045923156-300x140.png" alt="Banner Image">
-        </div>
-        <div class="banner-text">
-            <h1>Discover Luxury and Affordable Van Rentals in Dubai</h1>
-            <p>Call or WhatsApp us today to book your van and make your trip unforgettable!</p>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="listing-container">
-           <div class="listing-item">
-                <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" alt="Standard Van">
-                <h3>Standard Van for Rent</h3>
-                <p>AED 299 / Day (Within Dubai Only)</p>
-                <p>Reliable and spacious van, ideal for large families or groups traveling together.</p>
-                <div class="details">
-                    <p>Model: Nissan NV350</p>
-                    <p>Year: 2021</p>
-                </div>
-                <a href="https://wa.me/971569420950" class="whatsapp-button" target="_blank">
-                    <span class="whatsapp-logo"></span> WhatsApp: +971569420950
-                </a>
-                <a href="tel:+971569420950" class="call-button">
-                    📞 Call: +971569420950
-                </a>
-            </div>  <div class="listing-item">
-                <img src="https://runwaybusrental.com/wp-content/uploads/2023/12/hiace-toyota-12-seater-rental-in-dubai.webp" alt="Luxury Van">
-                <h3>Luxury Van for Rent</h3>
-                <p>AED 699 / Day</p>
-                <p>Spacious luxury van perfect for group travel or family outings. Comfort and style guaranteed.</p>
-                <div class="details">
-                    <p>Model: Toyota Hiace</p>
-                    <p>Year: 2023</p>
-                </div>
-                <a href="https://wa.me/971569420950" class="whatsapp-button" target="_blank">
-                    <span class="whatsapp-logo"></span> WhatsApp: +971569420950
-                </a>
-                <a href="tel:+971569420950" class="call-button">
-                    📞 Call: +971569420950
-                </a>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://vanrental.pl/wp-content/uploads/2024/12/logo-1-e1679045923156-300x140.png" alt="Dubai Van Rental Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="car-rental-in-uae.html">Services</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+        </nav>
+    </header>
 
-            <div class="listing-item">
-                <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" alt="Economy Van">
-                <h3>Economy Van for Rent</h3>
-                <p>AED 399 / Day</p>
-                <p>Affordable and reliable, perfect for daily rentals or moving needs. Comfortable and efficient.</p>
-                <div class="details">
-                    <p>Model: Nissan NV350</p>
-                    <p>Year: 2022</p>
+    <section class="hero">
+        <h1>Dubai Van Rental Service</h1>
+        <p>Choose from our wide range of comfortable and reliable vans. Daily and monthly rentals available with free delivery in Dubai.</p>
+    </section>
+
+    <main class="vehicles-grid">
+        <!-- Toyota Hiace High Roof -->
+        <article class="vehicle-card">
+            <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" 
+                 alt="15 Seater Toyota Hiace High Roof Van"
+                 loading="lazy">
+            <div class="vehicle-card-content">
+                <h2>Toyota Hiace High Roof</h2>
+                <div class="price">From AED 499/day</div>
+                <div class="price" style="color: #27ae60;">AED 6,500/month</div>
+                <ul class="features">
+                    <li>15 Seats Available</li>
+                    <li>Extra Cargo Space</li>
+                    <li>Powerful AC System</li>
+                    <li>Free Delivery in Dubai</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="15-seater-toyota-hiace-van-rental-dubai.html" class="cta">View Details</a>
+                    <a href="https://wa.me/971569420950" class="cta whatsapp-btn" target="_blank" rel="noopener">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+971569420950" class="cta call-btn">
+                        <svg class="phone-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call
+                    </a>
                 </div>
-                <a href="https://wa.me/971569420950" class="whatsapp-button" target="_blank">
-                    <span class="whatsapp-logo"></span> WhatsApp: +971569420950
-                </a>
-                <a href="tel:+971569420950" class="call-button">
-                    📞 Call: +971569420950
-                </a>
             </div>
+        </article>
 
-           
-
-            <!-- Additional listings can be added here -->
-            <div class="listing-item">
-                <img src="https://www.oneclickdrive.com/application/views/img/cars/toyota-coaster-20-passenger-bus-rent-hire-duba-uae.jpg?v=2.7" alt="Toyota Coaster 30 Seater">
-                <h3>Premium Van for Rent</h3>
-                <p>AED 800 / Day</p>
-                <p>Top-of-the-line van with premium features and seating for long-distance travel.</p>
-                <div class="details">
-                    <p>Model: Mercedes Sprinter</p>
-                    <p>Year: 2023</p>
+        <!-- Toyota Hiace Standard -->
+        <article class="vehicle-card">
+            <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" 
+                 alt="11 Seater Toyota Hiace Standard Van"
+                 loading="lazy">
+            <div class="vehicle-card-content">
+                <h2>Toyota Hiace Standard</h2>
+                <div class="price">From AED 449/day</div>
+                <div class="price" style="color: #27ae60;">AED 6,000/month</div>
+                <ul class="features">
+                    <li>11 Passenger Seats</li>
+                    <li>Regular AC System</li>
+                    <li>Standard Comfort</li>
+                    <li>Dubai & Northern Emirates</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="11-seater-toyota-hiace-standard-van-rental-dubai.html" class="cta">View Details</a>
+                    <a href="https://wa.me/971569420950" class="cta whatsapp-btn" target="_blank" rel="noopener">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+971569420950" class="cta call-btn">
+                        <svg class="phone-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call
+                    </a>
                 </div>
-                <a href="https://wa.me/971569420950" class="whatsapp-button" target="_blank">
-                    <span class="whatsapp-logo"></span> WhatsApp: +971569420950
-                </a>
-                <a href="tel:+971569420950" class="call-button">
-                    📞 Call: +971569420950
-                </a>
             </div>
-  <!-- Additional listings can be added here -->
-            <div class="listing-item">
-                <img src="https://www.busrentdubai.ae/wp-content/uploads/2024/08/7-seat-car-rent-Dubai-300x181.webp" alt="7 Seater Van">
-                <h3>7 Seater Van  for Rent</h3>
-                <p>AED 350 / Day</p>
-                <p>Top-of-the-line van with premium features and seating for long-distance travel.</p>
-                <div class="details">
-                    <p>Model: Toyota Van</p>
-                    <p>Year: 2023</p>
+        </article>
+
+        <!-- Toyota Hiace VIP -->
+        <article class="vehicle-card">
+            <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" 
+                 alt="10 Seater Toyota Hiace VIP Van"
+                 loading="lazy">
+            <div class="vehicle-card-content">
+                <h2>Toyota Hiace VIP</h2>
+                <div class="price">From AED 799/day</div>
+                <div class="price" style="color: #27ae60;">AED 9,500/month</div>
+                <ul class="features">
+                    <li>10 VIP Seats</li>
+                    <li>Luxury Interior</li>
+                    <li>Entertainment System</li>
+                    <li>Premium Service</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="10-seater-toyota-hiace-vip-van-rental-dubai.html" class="cta">View Details</a>
+                    <a href="https://wa.me/971569420950" class="cta whatsapp-btn" target="_blank" rel="noopener">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+971569420950" class="cta call-btn">
+                        <svg class="phone-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call
+                    </a>
                 </div>
-                <a href="https://wa.me/971569420950" class="whatsapp-button" target="_blank">
-                    <span class="whatsapp-logo"></span> WhatsApp: +971569420950
-                </a>
-                <a href="tel:+971569420950" class="call-button">
-                    📞 Call: +971569420950
-                </a>
             </div>
- <div class="listing-item">
-                <img src="https://www.busrentdubai.ae/wp-content/uploads/2024/09/Bus-Rental-Dubai-1-300x181.webp" alt="7 Seater Van">
-                <h3>Premium Bus for Rent</h3>
-                <p>AED 1050 / Day</p>
-                <p>Top-of-the-line van with premium features and seating for long-distance travel.</p>
-                <div class="details">
-                    <p>Model: Big Bus</p>
-                    <p>Year: 2023</p>
+        </article>
+
+        <!-- Toyota Hiace Business -->
+        <article class="vehicle-card">
+            <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" 
+                 alt="12 Seater Toyota Hiace Business Van"
+                 loading="lazy">
+            <div class="vehicle-card-content">
+                <h2>Toyota Hiace Business</h2>
+                <div class="price">From AED 599/day</div>
+                <div class="price" style="color: #27ae60;">AED 7,500/month</div>
+                <ul class="features">
+                    <li>12 Business Seats</li>
+                    <li>WiFi Available</li>
+                    <li>Business Interior</li>
+                    <li>Corporate Service</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="12-seater-toyota-hiace-business-van-rental-dubai.html" class="cta">View Details</a>
+                    <a href="https://wa.me/971569420950" class="cta whatsapp-btn" target="_blank" rel="noopener">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+971569420950" class="cta call-btn">
+                        <svg class="phone-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call
+                    </a>
                 </div>
-                <a href="https://wa.me/971569420950" class="whatsapp-button" target="_blank">
-                    <span class="whatsapp-logo"></span> WhatsApp: +971569420950
-                </a>
-                <a href="tel:+971569420950" class="call-button">
-                    📞 Call: +971569420950
-                </a>
             </div>
+        </article>
 
+        <!-- Toyota Hiace Executive -->
+        <article class="vehicle-card">
+            <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" 
+                 alt="Toyota Hiace Executive Van"
+                 loading="lazy">
+            <div class="vehicle-card-content">
+                <h2>Toyota Hiace Executive</h2>
+                <div class="price">From AED 649/day</div>
+                <div class="price" style="color: #27ae60;">AED 8,000/month</div>
+                <ul class="features">
+                    <li>Executive Interior</li>
+                    <li>Premium Sound System</li>
+                    <li>Chauffeur Service</li>
+                    <li>Executive Service</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="toyota-hiace-executive-van-rental-dubai.html" class="cta">View Details</a>
+                    <a href="https://wa.me/971569420950" class="cta whatsapp-btn" target="_blank" rel="noopener">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+971569420950" class="cta call-btn">
+                        <svg class="phone-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call
+                    </a>
+                </div>
+            </div>
+        </article>
 
-        </div>
+        <!-- Hyundai H1 -->
+        <article class="vehicle-card">
+            <img src="https://runwaybusrental.com/wp-content/uploads/2023/12/hiace-toyota-12-seater-rental-in-dubai.webp" 
+                 alt="8 Seater Hyundai H1 Van"
+                 loading="lazy">
+            <div class="vehicle-card-content">
+                <h2>Hyundai H1</h2>
+                <div class="price">From AED 399/day</div>
+                <div class="price" style="color: #27ae60;">AED 5,500/month</div>
+                <ul class="features">
+                    <li>8 Comfortable Seats</li>
+                    <li>Modern Design</li>
+                    <li>Fuel Efficient</li>
+                    <li>Weekly Maintenance</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="8-seater-hyundai-h1-van-rental-dubai.html" class="cta">View Details</a>
+                    <a href="https://wa.me/971569420950" class="cta whatsapp-btn" target="_blank" rel="noopener">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+971569420950" class="cta call-btn">
+                        <svg class="phone-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call
+                    </a>
+                </div>
+            </div>
+        </article>
 
-    </div>
-    <footer style="background-color: #333; color: #fff; padding: 20px; text-align: center; margin-top: 30px;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <p>&copy; 2025 <a href="https://dubainvansrental.com" style="color: #fff; text-decoration: underline;">Dubai Vans Rental</a>. All Rights Reserved.</p>
-            <p>
-                <a href="https://www.dubainvansrental.com/aboutus" style="color: #fff; margin-right: 15px; text-decoration: none;">About Us</a> |
-                <a href="https://dubaivansrental.com/contactus.html" style="color: #fff; margin-right: 15px; text-decoration: none;">Contact Us</a> |
-                <a href="https://dubaivansrental.com/car-rental-in-uae.html" style="color: #fff; margin-right: 15px; text-decoration: none;">Services</a> |
-                <a href="https://www.dubainvansrental.com/privacy-policy" style="color: #fff; margin-right: 15px; text-decoration: none;">Privacy Policy</a> |
-                <a href="https://dubaivansrental.com/faq" style="color: #fff; margin-right: 15px; text-decoration: none;">FAQs</a>
-            </p>
-            <p>Follow us on:
-                <a href="https://www.facebook.com/profile.php?id=61571689135920" target="_blank" style="color: #fff; margin-left: 10px; text-decoration: none;">Facebook</a>,
-                <a href="https://instagram.com/dubainvansrental" target="_blank" style="color: #fff; margin-left: 10px; text-decoration: none;">Instagram</a>
-            </p>
+        <!-- Nissan NV350 Premium -->
+        <article class="vehicle-card">
+            <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" 
+                 alt="Nissan NV350 Premium Van"
+                 loading="lazy">
+            <div class="vehicle-card-content">
+                <h2>Nissan NV350 Premium</h2>
+                <div class="price">From AED 349/day</div>
+                <div class="price" style="color: #27ae60;">AED 5,800/month</div>
+                <ul class="features">
+                    <li>Premium Leather Seats</li>
+                    <li>GPS Navigation</li>
+                    <li>Modern Features</li>
+                    <li>Excellent Comfort</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="nissan-nv350-premium-van-rental-dubai.html" class="cta">View Details</a>
+                    <a href="https://wa.me/971569420950" class="cta whatsapp-btn" target="_blank" rel="noopener">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+971569420950" class="cta call-btn">
+                        <svg class="phone-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Nissan NV350 Cargo -->
+        <article class="vehicle-card">
+            <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" 
+                 alt="Nissan NV350 Cargo Van"
+                 loading="lazy">
+            <div class="vehicle-card-content">
+                <h2>Nissan NV350 Cargo</h2>
+                <div class="price">From AED 279/day</div>
+                <div class="price" style="color: #27ae60;">AED 4,500/month</div>
+                <ul class="features">
+                    <li>Maximum Cargo Space</li>
+                    <li>Reliable Performance</li>
+                    <li>Basic Insurance</li>
+                    <li>Perfect for Moving</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="nissan-nv350-cargo-van-rental-dubai.html" class="cta">View Details</a>
+                    <a href="https://wa.me/971569420950" class="cta whatsapp-btn" target="_blank" rel="noopener">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+971569420950" class="cta call-btn">
+                        <svg class="phone-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Nissan NV350 Family -->
+        <article class="vehicle-card">
+            <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" 
+                 alt="Nissan NV350 Family Van"
+                 loading="lazy">
+            <div class="vehicle-card-content">
+                <h2>Nissan NV350 Family</h2>
+                <div class="price">From AED 329/day</div>
+                <div class="price" style="color: #27ae60;">AED 5,200/month</div>
+                <ul class="features">
+                    <li>Family-Friendly Design</li>
+                    <li>Child Seat Compatible</li>
+                    <li>Spacious Interior</li>
+                    <li>Safety Features</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="nissan-nv350-family-van-rental-dubai.html" class="cta">View Details</a>
+                    <a href="https://wa.me/971569420950" class="cta whatsapp-btn" target="_blank" rel="noopener">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+971569420950" class="cta call-btn">
+                        <svg class="phone-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Nissan NV350 Airport -->
+        <article class="vehicle-card">
+            <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" 
+                 alt="Nissan NV350 Airport Transfer Van"
+                 loading="lazy">
+            <div class="vehicle-card-content">
+                <h2>Nissan NV350 Airport</h2>
+                <div class="price">From AED 359/day</div>
+                <div class="price" style="color: #27ae60;">AED 5,900/month</div>
+                <ul class="features">
+                    <li>Airport Transfer Special</li>
+                    <li>Extra Luggage Space</li>
+                    <li>Meet & Greet Service</li>
+                    <li>Flight Tracking</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="nissan-nv350-airport-van-rental-dubai.html" class="cta">View Details</a>
+                    <a href="https://wa.me/971569420950" class="cta whatsapp-btn" target="_blank" rel="noopener">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+971569420950" class="cta call-btn">
+                        <svg class="phone-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Nissan NV350 Corporate -->
+        <article class="vehicle-card">
+            <img src="https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp" 
+                 alt="Nissan NV350 Corporate Van"
+                 loading="lazy">
+            <div class="vehicle-card-content">
+                <h2>Nissan NV350 Corporate</h2>
+                <div class="price">From AED 379/day</div>
+                <div class="price" style="color: #27ae60;">AED 6,200/month</div>
+                <ul class="features">
+                    <li>Corporate Setup</li>
+                    <li>Mobile Office Ready</li>
+                    <li>Business District Service</li>
+                    <li>Corporate Insurance</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="nissan-nv350-corporate-van-rental-dubai.html" class="cta">View Details</a>
+                    <a href="https://wa.me/971569420950" class="cta whatsapp-btn" target="_blank" rel="noopener">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+971569420950" class="cta call-btn">
+                        <svg class="phone-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Dubai Van Rental Service - Your trusted partner in professional van rental solutions since 2015.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="aboutus.html">About Us</a>
+                        <a href="car-rental-in-uae.html">Services</a>
+                        <a href="contactus.html">Contact</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>
+                        <a href="tel:+971569420950" class="footer-contact">
+                            <svg viewBox="0 0 24 24" width="16" height="16" style="margin-right: 8px;">
+                                <path fill="currentColor" d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                            </svg>
+                            +971 56 942 0950
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://wa.me/971569420950" class="footer-contact" target="_blank">
+                            <svg viewBox="0 0 24 24" width="16" height="16" style="margin-right: 8px;">
+                                <path fill="currentColor" d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                            </svg>
+                            WhatsApp
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dubai Van Rental Service. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+        this.classList.toggle('active');
+    });
+    </script>
 </body>
 </html>

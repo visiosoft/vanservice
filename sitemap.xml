@@ -1,37 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+    <!-- Main Pages -->
+    <url>
+        <loc>https://dubaivansrental.com/</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://vanrental.pl/wp-content/uploads/2024/12/logo-1-e1679045923156-300x140.png</image:loc>
+            <image:title>Dubai Van Rental Service Logo</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/aboutus.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/car-rental-in-uae.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://ymimg1.b8cdn.com/resized/car_model/10902/pictures/13377487/webp_listing_main_01.webp</image:loc>
+            <image:title>Nissan NV350 Van</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://runwaybusrental.com/wp-content/uploads/2023/12/hiace-toyota-12-seater-rental-in-dubai.webp</image:loc>
+            <image:title>Toyota Hiace Luxury Van</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/contactus.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/faq.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
-<url>
-  <loc>https://dubaivansrental.com/</loc>
-  <lastmod>2025-02-03T23:03:45+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://dubaivansrental.com/contactus.html</loc>
-  <lastmod>2025-02-03T23:03:45+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dubaivansrental.com/car-rental-in-uae.html</loc>
-  <lastmod>2025-02-03T23:03:45+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dubaivansrental.com/faq</loc>
-  <lastmod>2025-02-03T23:03:45+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dubaivansrental.com/contactus</loc>
-  <lastmod>2025-02-03T23:03:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
+    <!-- Toyota Hiace Variants -->
+    <url>
+        <loc>https://dubaivansrental.com/15-seater-toyota-hiace-van-rental-dubai.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/11-seater-toyota-hiace-standard-van-rental-dubai.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/10-seater-toyota-hiace-vip-van-rental-dubai.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/12-seater-toyota-hiace-business-van-rental-dubai.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/toyota-hiace-executive-van-rental-dubai.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
+    <!-- Hyundai H1 -->
+    <url>
+        <loc>https://dubaivansrental.com/8-seater-hyundai-h1-van-rental-dubai.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Nissan NV350 Variants -->
+    <url>
+        <loc>https://dubaivansrental.com/nissan-nv350-premium-van-rental-dubai.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/nissan-nv350-cargo-van-rental-dubai.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/nissan-nv350-family-van-rental-dubai.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/nissan-nv350-airport-van-rental-dubai.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/nissan-nv350-corporate-van-rental-dubai.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
 </urlset>

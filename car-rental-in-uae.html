@@ -1,34 +1,265 @@
-<header>
-    <h1>Car Rental Services in the UAE</h1>
-    <p>Affordable, Reliable, and Convenient Car Rentals for All Your Travel Needs</p>
-<style>
-     .whatsapp-logo {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            margin-right: 10px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van Rental Services in UAE | Professional Van Rental Solutions</title>
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="description" content="Professional van rental services in UAE. Toyota Hiace, Nissan NV350, and luxury vans available. ✓ 24/7 Support ✓ Competitive Rates ✓ Well-maintained Fleet">
+    <meta name="keywords" content="Van Rental UAE, Van Hire Dubai, Toyota Hiace Rental, Nissan NV350 Rental, Luxury Van Rental UAE">
+    
+    <!-- Modern CSS -->
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #25D366;
+            --accent-color: #34b7f1;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
         }
-        .whatsapp-button {
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        .header {
+            background-color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-links a.active {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .footer-section h3 {
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p {
+            color: var(--white);
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-contact {
             display: inline-flex;
             align-items: center;
-            background-color: #25D366;
-            color: #fff;
-            padding: 8px 15px;
-            font-size: 16px;
-            border-radius: 25px;
+            color: var(--white);
             text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+            transition: var(--transition);
         }
-        .whatsapp-button:hover {
-            background-color: #128C7E;
+
+        .footer-contact:hover {
+            opacity: 1;
+            color: var(--accent-color);
         }
-</style>
 
-</header>
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
 
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-links {
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://vanrental.pl/wp-content/uploads/2024/12/logo-1-e1679045923156-300x140.png" alt="Dubai Van Rental Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="car-rental-in-uae.html" class="active">Services</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <header>
+            <h1>Car Rental Services in the UAE</h1>
+            <p>Affordable, Reliable, and Convenient Car Rentals for All Your Travel Needs</p>
+        </header>
+
+        <div class="container">
+            <div class="content">
+                <h2>Why Choose Our Car Rental Services?</h2>
+                <p>Our car rental services in the UAE provide a seamless experience for residents and visitors. Whether you're exploring the bustling streets of Dubai, visiting Abu Dhabi, or traveling to other emirates, we have the perfect vehicle for you. Here's why customers trust us:</p>
+                <ul>
+                    <li>A wide selection of vehicles, including economy, luxury, and SUVs.</li>
+                    <li>Competitive daily, weekly, and monthly rental rates.</li>
+                    <li>Easy online booking with instant confirmation.</li>
+                    <li>Well-maintained vehicles for a safe and comfortable drive.</li>
+                    <li>24/7 customer support for all your inquiries.</li>
+                </ul>
+                <h2>Our Fleet</h2>
+                <p>We offer a variety of vehicles to suit every need and budget:</p>
+                <ul>
+                    <li><strong>Economy Cars:</strong> Affordable and fuel-efficient options for daily use. <a href="https://dubainvansrental.com">View economy cars</a>.</li>
+                    <li><strong>Luxury Cars:</strong> High-end vehicles for business or leisure travel. <a href="https://dubainvansrental.com">Browse luxury cars</a>.</li>
+                    <li><strong>SUVs:</strong> Spacious and powerful cars ideal for family trips or off-road adventures. <a href="https://dubainvansrental.com">Explore SUVs</a>.</li>
+                    <li><strong>Vans:</strong> Perfect for group travel or transporting goods. <a href="https://dubainvansrental.com">Check out our vans</a>.</li>
+                </ul>
+            
+                <h2>How to Book</h2>
+                <p>Booking your rental car with us is simple and hassle-free:</p>
+                <ol>
+                    <li>Visit our <a href="https://dubainvansrental.com">website</a> and browse our fleet of vehicles.</li>
+                    <li>Choose your preferred car and rental duration. <a href="https://dubainvansrental.com/our-fleet">Explore our fleet</a>.</li>
+                    <li>Fill in your details and confirm your booking. <a href="https://dubainvansrental.com/book-now">Start booking</a>.</li>
+                    <li>Pick up your car at the designated location or opt for delivery to your doorstep. <a href="https://dubainvansrental.com">Learn more about delivery</a>.</li>
+                </ol>
+            
+                <h2>Contact Us</h2>
+                <p>Need assistance or have questions? Our team is here to help. Reach us at:</p>
+                <ul>
+                    <li>Email: <a href="mailto:support@dubainvansrental.com">support@dubainvansrental.com</a></li>
+                    <a href="https://wa.me/971569420950" class="whatsapp-button" target="_blank">
+                        <span class="whatsapp-logo"></span> WhatsApp: +971569420950
+                    </a>
+                </ul>
 <div class="container">
     <div class="content">
         <h2>Why Choose Our Car Rental Services?</h2>

@@ -1,12 +1,29 @@
 User-agent: *
 Allow: /
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /search/
-Disallow: /cart/
-Disallow: /checkout/
-Disallow: /my-account/
-Disallow: /private/
-Disallow: /tmp/
+Allow: /aboutus.html
+Allow: /contactus.html
+Allow: /faq.html
+Allow: /car-rental-in-uae.html
+Allow: /confirmation.html
 
-Sitemap: https://dubaivansrental.com/sitemap.xml
+# Sitemaps
+Sitemap: https://www.dubaivansrental.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+
+# Allow CSS, JS, and Images
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
