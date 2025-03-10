@@ -8,6 +8,7 @@
             <li><a href="index.html" id="nav-home">Home</a></li>
             <li><a href="aboutus.html" id="nav-about">About Us</a></li>
             <li><a href="car-rental-in-uae.html" id="nav-services">Services</a></li>
+            <li><a href="blog.html" id="nav-blog">Blog</a></li>
             <li><a href="contactus.html" id="nav-contact">Contact</a></li>
             <li><a href="faq.html" id="nav-faq">FAQ</a></li>
         </ul>
@@ -19,8 +20,75 @@
     </nav>
 </header>
 
-<!-- Add this CSS to your existing styles -->
 <style>
+:root {
+    --primary-color: #2c3e50;
+    --white: #ffffff;
+    --text-color: #333333;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.header {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -63,14 +131,25 @@
 
     .nav-links li {
         margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.5rem;
     }
 }
 </style>
 
-<!-- Add this JavaScript for mobile menu -->
 <script>
-document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-    document.querySelector('.nav-links').classList.toggle('active');
-    this.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    }
 });
 </script> 
