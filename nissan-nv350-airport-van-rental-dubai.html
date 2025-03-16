@@ -2,40 +2,316 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nissan NV350 Airport Van Rental Dubai | Dubai Van Rental</title>
-    <meta name="description" content="Rent a Nissan NV350 airport van in Dubai for reliable airport transfers. Perfect for group airport pickups and drop-offs. Professional airport transfer service.">
-    <meta name="keywords" content="nissan nv350 airport van dubai, airport transfer dubai, airport van rental dubai, dubai airport transport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Nissan NV350 Airport Van Rental Dubai | Airport Transfer Service | Dubai Van Rental</title>
+    <meta name="description" content="Book Nissan NV350 airport van rental in Dubai for reliable, comfortable airport transfers. 24/7 service, professional chauffeurs, spacious interior with luggage space. Best rates for DXB airport transfers.">
+    <meta name="keywords" content="nissan nv350 airport van dubai, airport transfer dubai, airport van rental dubai, dubai airport transport, dxb airport transfer, dubai van rental">
     
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Nissan NV350 Airport Van Rental Dubai | Dubai Van Rental">
-    <meta property="og:description" content="Reliable Nissan NV350 airport van rental service in Dubai. Ideal for group airport transfers and pickups.">
-    <meta property="og:image" content="assets/images/vehicles/nissan-nv350-airport.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dubai Van Rental">
+    <meta property="og:title" content="Nissan NV350 Airport Van Rental Dubai | Professional Airport Transfer Service">
+    <meta property="og:description" content="Premium airport transfer service in Dubai with Nissan NV350. 24/7 availability, professional chauffeurs, and competitive rates for DXB airport transfers.">
+    <meta property="og:image" content="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/af/94/79/caption.jpg?w=600&h=600&s=1">
     <meta property="og:url" content="https://dubaivansrental.com/nissan-nv350-airport-van-rental-dubai">
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@DubaiVanRental">
     <meta name="twitter:title" content="Nissan NV350 Airport Van Rental Dubai">
-    <meta name="twitter:description" content="Professional Nissan NV350 airport van rental service in Dubai for group airport transfers.">
-    <meta name="twitter:image" content="assets/images/vehicles/nissan-nv350-airport.webp">
+    <meta name="twitter:description" content="Professional airport transfer service in Dubai. Book your Nissan NV350 van for comfortable and reliable airport transfers.">
+    <meta name="twitter:image" content="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/af/94/79/caption.jpg?w=600&h=600&s=1">
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dubaivansrental.com/nissan-nv350-airport-van-rental-dubai">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Nissan NV350 Airport Van Rental Dubai",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Dubai Van Rental Service",
+            "telephone": "+971569420950",
+            "priceRange": "AED 180-350",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Dubai",
+                "addressCountry": "UAE"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+        },
+        "description": "Professional airport transfer service in Dubai using Nissan NV350 vans. Available 24/7 with experienced chauffeurs.",
+        "offers": {
+            "@type": "Offer",
+            "price": "180",
+            "priceCurrency": "AED",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- AddThis Social Sharing -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-YOUR-ID"></script>
+    
+    <style>
+        :root {
+            --morph-duration: 0.5s;
+            --morph-easing: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Morphing Transitions */
+        .morph-element {
+            transition: all var(--morph-duration) var(--morph-easing);
+            transform-origin: center;
+        }
+
+        .morph-element:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            color: white;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s var(--morph-easing) forwards;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transform: scale(1.1);
+            transition: transform 10s var(--morph-easing);
+        }
+
+        .hero-section:hover .hero-image {
+            transform: scale(1);
+        }
+
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all var(--morph-duration) var(--morph-easing);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        /* Booking Form */
+        .booking-form {
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s var(--morph-easing) 0.5s forwards;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            transition: all var(--morph-duration) var(--morph-easing);
+        }
+
+        .form-input:focus {
+            border-color: #2c3e50;
+            transform: scale(1.02);
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all var(--morph-duration) var(--morph-easing);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+            transform: translateX(-100%);
+            transition: transform 0.6s var(--morph-easing);
+        }
+
+        .cta-button:hover::after {
+            transform: translateX(100%);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes morphScale {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 60vh;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-form {
+                margin: 2rem;
+            }
+        }
+
+        /* Enhanced SEO Heading Styles */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            color: #2c3e50;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+            color: #2c3e50;
+        }
+
+        /* Enhanced Accessibility Styles */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+
+        /* Social Media Integration */
+        .social-share {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .social-share h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Enhanced Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .hero-content {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header morph-element">
         <nav class="nav-container">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo morph-element">
                 <img src="https://vanrental.pl/wp-content/uploads/2024/12/logo-1-e1679045923156-300x140.png" alt="Dubai Van Rental Logo">
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="car-rental-in-uae.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contactus.html">Contact</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="index.html" class="morph-element">Home</a></li>
+                <li><a href="aboutus.html" class="morph-element">About Us</a></li>
+                <li><a href="car-rental-in-uae.html" class="morph-element">Services</a></li>
+                <li><a href="blog.html" class="morph-element">Blog</a></li>
+                <li><a href="contactus.html" class="morph-element">Contact</a></li>
+                <li><a href="faq.html" class="morph-element">FAQ</a></li>
             </ul>
             <div class="mobile-menu-btn">
                 <span></span>
@@ -47,136 +323,72 @@
 
     <!-- Main Content -->
     <main class="service-content">
-        <section class="vehicle-details">
-            <h1>Nissan NV350 Airport Van Rental Dubai</h1>
-            
-            <div class="vehicle-gallery">
-                <img src="assets/images/vehicles/nissan-nv350-airport.webp" alt="Nissan NV350 airport van exterior" class="featured-image" loading="lazy">
-                <div class="gallery-grid">
-                    <img src="assets/images/vehicles/nissan-nv350-airport-interior.webp" alt="Nissan NV350 airport van interior" loading="lazy">
-                    <img src="assets/images/vehicles/nissan-nv350-airport-rear.webp" alt="Nissan NV350 airport van rear view" loading="lazy">
-                </div>
-            </div>
-
-            <div class="vehicle-specs">
-                <h2>Vehicle Specifications</h2>
-                <ul>
-                    <li>Seating Capacity: 10 passengers</li>
-                    <li>Luggage Space: 4-5 suitcases</li>
-                    <li>Air Conditioning: Yes</li>
-                    <li>USB Ports: Available</li>
-                    <li>WiFi: Available</li>
-                    <li>Child Seats: Available on request</li>
-                </ul>
-            </div>
-
-            <div class="vehicle-features">
-                <h2>Features & Amenities</h2>
-                <ul>
-                    <li>Comfortable leather seats</li>
-                    <li>Individual reading lights</li>
-                    <li>Privacy curtains</li>
-                    <li>Climate control</li>
-                    <li>Entertainment system</li>
-                    <li>Safety features</li>
-                    <li>Spacious legroom</li>
-                    <li>Easy access doors</li>
-                </ul>
-            </div>
-
-            <div class="pricing-section">
-                <h2>Rental Rates</h2>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h3>Airport Transfer</h3>
-                        <p class="price">From AED 180</p>
-                        <ul>
-                            <li>One-way service</li>
-                            <li>Meet & greet</li>
-                            <li>Luggage assistance</li>
-                            <li>Flight tracking</li>
-                        </ul>
-                        <a href="https://wa.me/+971523089966" class="cta whatsapp-btn">Book Now</a>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>Daily Rental</h3>
-                        <p class="price">From AED 350</p>
-                        <ul>
-                            <li>8-hour service</li>
-                            <li>Professional driver</li>
-                            <li>Fuel included</li>
-                            <li>Flexible pickup/dropoff</li>
-                        </ul>
-                        <a href="https://wa.me/+971523089966" class="cta whatsapp-btn">Book Now</a>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>Weekly Rental</h3>
-                        <p class="price">From AED 2,100</p>
-                        <ul>
-                            <li>7-day service</li>
-                            <li>Unlimited mileage</li>
-                            <li>24/7 support</li>
-                            <li>Regular maintenance</li>
-                        </ul>
-                        <a href="https://wa.me/+971523089966" class="cta whatsapp-btn">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-areas">
-                <h2>Service Areas</h2>
-                <ul>
-                    <li>Dubai International Airport (DXB)</li>
-                    <li>Dubai Marina</li>
-                    <li>Downtown Dubai</li>
-                    <li>Jumeirah Beach Area</li>
-                    <li>Business Bay</li>
-                    <li>All major hotels and attractions</li>
-                </ul>
-            </div>
-
-            <div class="booking-info">
-                <h2>Booking Information</h2>
-                <ul>
-                    <li>Advance booking recommended</li>
-                    <li>Flexible payment options</li>
-                    <li>Corporate accounts available</li>
-                    <li>24/7 customer support</li>
-                    <li>Free cancellation up to 24 hours</li>
-                </ul>
+        <!-- Hero Section with Enhanced SEO -->
+        <section class="hero-section">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/af/94/79/caption.jpg?w=600&h=600&s=1" 
+                 alt="Nissan NV350 Airport Van - Luxury Airport Transfer Service Dubai" 
+                 class="hero-image">
+            <div class="hero-content">
+                <h1>Nissan NV350 Airport Van Rental Dubai</h1>
+                <h2>Professional Airport Transfer Service</h2>
+                <p>Experience premium airport transfers in Dubai with our luxurious Nissan NV350. Available 24/7 for DXB airport pickups and drop-offs.</p>
+                <a href="#booking" class="cta-button">Book Your Airport Transfer</a>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <h2>Ready to Book?</h2>
-            <p>Contact us now for the best Nissan NV350 airport van rental rates in Dubai</p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/+971523089966" class="cta whatsapp-btn">
-                    <svg class="whatsapp-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 15.55C16.4 16.31 15.3 16.96 14.47 17.14C13.93 17.26 13.23 17.35 10.76 16.35C7.7 15.12 5.72 12.03 5.57 11.84C5.43 11.65 4.43 10.31 4.43 8.93C4.43 7.55 5.13 6.89 5.41 6.61C5.68 6.33 6.01 6.24 6.21 6.24C6.41 6.24 6.61 6.24 6.78 6.25C7.03 6.26 7.21 6.27 7.42 6.86C7.66 7.57 8.38 8.95 8.45 9.1C8.53 9.25 8.58 9.43 8.47 9.64C7.95 10.73 7.39 10.67 7.81 11.37C9.21 13.89 10.63 14.47 12.94 15.37C13.24 15.5 13.43 15.46 13.63 15.23C13.83 15 14.5 14.23 14.73 13.93C14.95 13.63 15.18 13.69 15.48 13.79C15.78 13.89 17.21 14.54 17.54 14.7C17.87 14.86 18.09 14.94 18.16 15.09C18.24 15.23 18.24 15.91 16.64 15.55Z" fill="currentColor"/>
-                    </svg>
-                    Book Now
-                </a>
-                <a href="tel:+971523089966" class="cta call-btn">
-                    <svg class="phone-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" fill="currentColor"/>
-                    </svg>
-                    Call Us Now
-                </a>
+        <!-- Features Section with Enhanced SEO -->
+        <section class="feature-grid">
+            <h2 class="visually-hidden">Airport Van Features</h2>
+            <div class="feature-card morph-element">
+                <h3>Spacious Interior & Luggage Space</h3>
+                <p>Comfortable seating with ample luggage storage for airport transfers. Perfect for groups and families.</p>
             </div>
+            <div class="feature-card morph-element">
+                <h3>24/7 Airport Transfer Service</h3>
+                <p>Available round-the-clock for all flight schedules with professional, experienced chauffeurs.</p>
+            </div>
+            <div class="feature-card morph-element">
+                <h3>Premium Comfort & Amenities</h3>
+                <p>Luxury amenities including climate control, WiFi, and entertainment system for a pleasant journey.</p>
+            </div>
+        </section>
+
+        <!-- Booking Form with Enhanced SEO -->
+        <section id="booking" class="booking-form">
+            <h2>Book Your Dubai Airport Transfer</h2>
+            <form id="airport-transfer-form">
+                <input type="text" class="form-input morph-element" placeholder="Full Name" required aria-label="Full Name">
+                <input type="email" class="form-input morph-element" placeholder="Email Address" required aria-label="Email Address">
+                <input type="tel" class="form-input morph-element" placeholder="Phone Number" required aria-label="Phone Number">
+                <input type="datetime-local" class="form-input morph-element" required aria-label="Pickup Date and Time">
+                <select class="form-input morph-element" required aria-label="Service Type">
+                    <option value="">Select Service Type</option>
+                    <option value="arrival">DXB Airport Arrival Pickup</option>
+                    <option value="departure">DXB Airport Departure Drop-off</option>
+                    <option value="round">Round Trip Airport Transfer</option>
+                </select>
+                <textarea class="form-input morph-element" placeholder="Additional Requirements" rows="4" aria-label="Additional Requirements"></textarea>
+                <button type="submit" class="cta-button">Submit Airport Transfer Booking</button>
+            </form>
+        </section>
+
+        <!-- Social Sharing Section -->
+        <section class="social-share">
+            <h2>Share This Service</h2>
+            <!-- AddThis Sharing Buttons -->
+            <div class="addthis_inline_share_toolbox"></div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="morph-element">
         <div class="footer-content">
             <div class="footer-grid">
-                <div class="footer-section">
+                <div class="footer-section morph-element">
                     <h3>About Us</h3>
                     <p>Dubai Van Rental Service - Your trusted partner in professional van rental solutions since 2015.</p>
                 </div>
-                <div class="footer-section">
+                <div class="footer-section morph-element">
                     <h3>Quick Links</h3>
                     <div class="footer-links">
                         <a href="index.html">Home</a>
@@ -187,38 +399,58 @@
                         <a href="faq.html">FAQ</a>
                     </div>
                 </div>
-                <div class="footer-section">
+                <div class="footer-section morph-element">
                     <h3>Contact Info</h3>
                     <p>
                         <a href="tel:+971569420950" class="footer-contact">
                             <svg viewBox="0 0 24 24" width="16" height="16" style="margin-right: 8px;">
-                                <path fill="currentColor" d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z"/>
+                                <path fill="currentColor" d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
                             </svg>
                             +971 56 942 0950
                         </a>
                     </p>
-                    <p>
-                        <a href="https://wa.me/971569420950" class="footer-contact" target="_blank">
-                            <svg viewBox="0 0 24 24" width="16" height="16" style="margin-right: 8px;">
-                                <path fill="currentColor" d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
-                            </svg>
-                            WhatsApp
-                        </a>
-                    </p>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Dubai Van Rental Service. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Mobile menu script -->
     <script>
-    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-        document.querySelector('.nav-links').classList.toggle('active');
-        this.classList.toggle('active');
-    });
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('airport-transfer-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your booking request. We will contact you shortly.');
+        });
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.morph-element').forEach((el) => observer.observe(el));
     </script>
 </body>
 </html> 
