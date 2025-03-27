@@ -271,6 +271,61 @@
             text-align: left;
             margin-bottom: 0;
         }
+
+        .related-services-section {
+            background: var(--light-bg);
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .related-services-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .related-services-section h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .related-services-section p {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--text-color);
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin: 0;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -307,7 +362,7 @@
         <!-- Categories -->
         <section class="blog-categories">
             <div class="category-list">
-                <a href="#" class="category-tag active">All Posts</a>
+                <a href="#" class="category-tag active">All</a>
                 <a href="#" class="category-tag">Travel Tips</a>
                 <a href="#" class="category-tag">Transportation</a>
                 <a href="#" class="category-tag">Dubai Guide</a>
@@ -315,31 +370,57 @@
             </div>
         </section>
 
+        <!-- Related Services Section -->
+        <section class="related-services-section">
+            <div class="related-services-content">
+                <h2>Our Services</h2>
+                <p>Explore our comprehensive range of van rental services across Dubai</p>
+                <div class="services-grid">
+                    <a href="services/airport-transfer.html" class="service-card">
+                        <h3>Airport Transfer</h3>
+                        <p>Reliable airport pickup and drop-off services</p>
+                    </a>
+                    <a href="services/8-seater-van-rental.html" class="service-card">
+                        <h3>8-Seater Van Rental</h3>
+                        <p>Perfect for small groups and families</p>
+                    </a>
+                    <a href="services/10-seater-van-rental.html" class="service-card">
+                        <h3>10-Seater Van Rental</h3>
+                        <p>Ideal for larger groups and corporate travel</p>
+                    </a>
+                    <a href="services/corporate-van-rental.html" class="service-card">
+                        <h3>Corporate Services</h3>
+                        <p>Professional transportation for businesses</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- Location Services Section -->
         <section class="location-services">
             <div class="location-services-content">
-                <h2>Van Rental Services by Location</h2>
-                <p>Find the perfect van rental service for your specific location in Dubai</p>
+                <h2>Location Services</h2>
+                <p>Find van rental services in your preferred location across Dubai</p>
                 <div class="location-grid">
                     <a href="locations/van-rental-near-me.html" class="location-card">
                         <h3>Van Rental Near Me</h3>
-                        <p>Find convenient van rental services in your area</p>
+                        <p>Find the closest van rental service to your location</p>
                     </a>
                     <a href="locations/best-van-rental-deira.html" class="location-card">
                         <h3>Van Rental in Deira</h3>
-                        <p>Premium van rental services in the heart of Deira</p>
+                        <p>Convenient van rental services in Deira area</p>
                     </a>
                     <a href="locations/van-rental-dubai-marina.html" class="location-card">
                         <h3>Van Rental in Dubai Marina</h3>
-                        <p>Luxury van rental services in Dubai Marina</p>
+                        <p>Premium van rental services in Dubai Marina</p>
                     </a>
                     <a href="locations/affordable-van-hire-jebel-ali.html" class="location-card">
                         <h3>Van Rental in Jebel Ali</h3>
-                        <p>Budget-friendly van rental options in Jebel Ali</p>
+                        <p>Affordable van rental options in Jebel Ali</p>
                     </a>
                     <a href="locations/last-minute-van-rental-dubai.html" class="location-card">
                         <h3>Last Minute Van Rental</h3>
-                        <p>Emergency van rental services available 24/7</p>
+                        <p>Quick and reliable last-minute van rental services</p>
                     </a>
                 </div>
             </div>
