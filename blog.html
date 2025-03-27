@@ -216,6 +216,61 @@
                 font-size: 2rem;
             }
         }
+
+        .location-services {
+            background: var(--light-bg);
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .location-services-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .location-services h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .location-services p {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .location-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-decoration: none;
+            color: var(--text-color);
+            transition: transform 0.3s ease;
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .location-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .location-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            text-align: left;
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -252,12 +307,41 @@
         <!-- Categories -->
         <section class="blog-categories">
             <div class="category-list">
-                <a href="#" class="category-tag active">All</a>
+                <a href="#" class="category-tag active">All Posts</a>
                 <a href="#" class="category-tag">Travel Tips</a>
-                <a href="#" class="category-tag">Van Rental</a>
-                <a href="#" class="category-tag">Tourism</a>
-                <a href="#" class="category-tag">Business Travel</a>
+                <a href="#" class="category-tag">Transportation</a>
                 <a href="#" class="category-tag">Dubai Guide</a>
+                <a href="#" class="category-tag">Van Rental Tips</a>
+            </div>
+        </section>
+
+        <!-- Location Services Section -->
+        <section class="location-services">
+            <div class="location-services-content">
+                <h2>Van Rental Services by Location</h2>
+                <p>Find the perfect van rental service for your specific location in Dubai</p>
+                <div class="location-grid">
+                    <a href="locations/van-rental-near-me.html" class="location-card">
+                        <h3>Van Rental Near Me</h3>
+                        <p>Find convenient van rental services in your area</p>
+                    </a>
+                    <a href="locations/best-van-rental-deira.html" class="location-card">
+                        <h3>Van Rental in Deira</h3>
+                        <p>Premium van rental services in the heart of Deira</p>
+                    </a>
+                    <a href="locations/van-rental-dubai-marina.html" class="location-card">
+                        <h3>Van Rental in Dubai Marina</h3>
+                        <p>Luxury van rental services in Dubai Marina</p>
+                    </a>
+                    <a href="locations/affordable-van-hire-jebel-ali.html" class="location-card">
+                        <h3>Van Rental in Jebel Ali</h3>
+                        <p>Budget-friendly van rental options in Jebel Ali</p>
+                    </a>
+                    <a href="locations/last-minute-van-rental-dubai.html" class="location-card">
+                        <h3>Last Minute Van Rental</h3>
+                        <p>Emergency van rental services available 24/7</p>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -441,7 +525,7 @@
             <div class="cta-buttons">
                 <a href="https://wa.me/+971523089966" class="cta whatsapp-btn">
                     <svg class="whatsapp-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 15.55C16.4 16.31 15.3 16.96 14.47 17.14C13.93 17.26 13.23 17.35 10.76 16.35C7.7 15.12 5.72 12.03 5.57 11.84C5.43 11.65 4.43 10.31 4.43 8.93C4.43 7.55 5.13 6.89 5.41 6.61C5.68 6.33 6.01 6.24 6.21 6.24C6.41 6.24 6.61 6.24 6.78 6.25C7.03 6.26 7.21 6.27 7.42 6.86C7.66 7.57 8.38 8.95 8.45 9.1C8.53 9.25 8.58 9.43 8.47 9.64C7.95 10.73 7.39 10.67 7.81 11.37C9.21 13.89 10.63 14.47 12.94 15.37C13.24 15.5 13.43 15.46 13.63 15.23C13.83 15 14.5 14.23 14.73 13.93C14.95 13.63 15.18 13.69 15.48 13.79C15.78 13.89 17.21 14.54 17.54 14.7C17.87 14.86 18.09 14.94 18.16 15.09C18.24 15.23 18.24 15.91 16.64 15.55Z" fill="currentColor"/>
+                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
                     </svg>
                     Get in Touch
                 </a>
