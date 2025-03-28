@@ -179,6 +179,18 @@
 
     <!-- Blog Posts -->
     <url>
+        <loc>https://dubaivansrental.com/blog/best-van-routes-dubai.html</loc>
+        <lastmod>2024-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://dubaivansrental.com/blog/corporate-transport-tips.html</loc>
+        <lastmod>2024-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://dubaivansrental.com/blog/corporate-transport-solutions.html</loc>
         <lastmod>2024-03-27</lastmod>
         <changefreq>monthly</changefreq>
