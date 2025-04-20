@@ -21,6 +21,543 @@
     
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* Enhanced Section Layouts */
+        .content-section {
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-section:nth-child(even) {
+            background: linear-gradient(to right, rgba(var(--primary-rgb), 0.03), rgba(var(--accent-rgb), 0.03));
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(var(--primary-rgb), 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-color);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(var(--accent-rgb), 0.15);
+        }
+
+        .benefit-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        /* Fleet Section */
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .vehicle-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 45px rgba(var(--accent-rgb), 0.2);
+        }
+
+        .vehicle-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .vehicle-content {
+            padding: 2rem;
+        }
+
+        .vehicle-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .vehicle-price {
+            font-size: 1.6rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        /* Rental Plans */
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .plan-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, transparent, rgba(var(--accent-rgb), 0.1));
+            border-radius: 0 20px 0 150px;
+            transition: all 0.3s ease;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 45px rgba(var(--accent-rgb), 0.2);
+        }
+
+        .plan-card:hover::after {
+            width: 180px;
+            height: 180px;
+        }
+
+        .plan-name {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .plan-price {
+            font-size: 2rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin: 1.5rem 0;
+        }
+
+        /* Rental Process */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .process-step {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+
+        .step-number::before {
+            content: '';
+            position: absolute;
+            width: 66px;
+            height: 66px;
+            border: 2px dashed var(--accent-color);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        /* Requirements Section */
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .requirement-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .requirement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 45px rgba(var(--accent-rgb), 0.2);
+        }
+
+        .requirement-title {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .requirement-title::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Feature Lists */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .feature-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-list li:hover::before {
+            transform: translateX(5px);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 4rem 2rem;
+            border-radius: 30px;
+            margin: 5rem auto;
+            max-width: 1100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('path-to-pattern.png') center/cover;
+            opacity: 0.1;
+        }
+
+        /* Animations */
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 3rem 0;
+            }
+
+            .section-container {
+                padding: 0 1.5rem;
+            }
+
+            .benefit-card,
+            .vehicle-card,
+            .plan-card,
+            .requirement-card {
+                padding: 1.5rem;
+            }
+
+            .vehicle-image {
+                height: 160px;
+            }
+
+            .plan-name,
+            .vehicle-title {
+                font-size: 1.6rem;
+            }
+
+            .plan-price,
+            .vehicle-price {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Banner Section Styles */
+        .banner-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .banner-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(var(--primary-rgb), 0.9) 0%,
+                rgba(var(--accent-rgb), 0.8) 100%);
+            z-index: 1;
+        }
+
+        .banner-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .banner-content {
+            flex: 1;
+            color: var(--white);
+        }
+
+        .banner-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .banner-text {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        .banner-cta {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .banner-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .banner-button.primary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .banner-button.primary:hover {
+            background: var(--accent-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .banner-button.secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .banner-button.secondary:hover {
+            background: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .banner-image {
+            flex: 0 0 400px;
+            position: relative;
+        }
+
+        .banner-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 992px) {
+            .banner-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .banner-content {
+                order: 1;
+            }
+
+            .banner-image {
+                order: 0;
+                flex: 0 0 300px;
+            }
+
+            .banner-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .banner-cta {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-title {
+                font-size: 2rem;
+            }
+
+            .banner-text {
+                font-size: 1.1rem;
+            }
+
+            .banner-image {
+                flex: 0 0 250px;
+            }
+        }
+
+        .monthly-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('images/monthly-van-rental.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem;
+            position: relative;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Template Include -->
@@ -31,167 +568,174 @@
         <div class="hero-content">
             <h1>Monthly Van Rental Dubai</h1>
             <p>Flexible Long-Term Transportation Solutions</p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/+971523089966" class="cta whatsapp-btn">
-                    <svg class="whatsapp-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 15.55C16.4 16.31 15.3 16.96 14.47 17.14C13.93 17.26 13.23 17.35 10.76 16.35C7.7 15.12 5.72 12.03 5.57 11.84C5.43 11.65 4.43 10.31 4.43 8.93C4.43 7.55 5.13 6.89 5.41 6.61C5.68 6.33 6.01 6.24 6.21 6.24C6.41 6.24 6.61 6.24 6.78 6.25C7.03 6.26 7.21 6.27 7.42 6.86C7.66 7.57 8.38 8.95 8.45 9.1C8.53 9.25 8.58 9.43 8.47 9.64C7.95 10.73 7.39 10.67 7.81 11.37C9.21 13.89 10.63 14.47 12.94 15.37C13.24 15.5 13.43 15.46 13.63 15.23C13.83 15 14.5 14.23 14.73 13.93C14.95 13.63 15.18 13.69 15.48 13.79C15.78 13.89 17.21 14.54 17.54 14.7C17.87 14.86 18.09 14.94 18.16 15.09C18.24 15.23 18.24 15.91 16.64 15.55Z" fill="currentColor"/>
+            <div class="banner-cta">
+                <a href="https://wa.me/+971523089966" class="banner-button primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 15.55C16.4 16.31 15.3 16.96 14.47 17.14C13.93 17.26 13.23 17.35 10.76 16.35C7.7 15.12 5.72 12.03 5.57 11.84C5.43 11.65 4.43 10.31 4.43 8.93C4.43 7.55 5.13 6.89 5.41 6.61C5.68 6.33 6.01 6.24 6.21 6.24C6.41 6.24 6.61 6.24 6.78 6.25C7.03 6.26 7.21 6.27 7.42 6.86C7.66 7.57 8.38 8.95 8.45 9.1C8.53 9.25 8.58 9.43 8.47 9.64C7.95 10.73 7.39 10.67 7.81 11.37C9.21 13.89 10.63 14.47 12.94 15.37C13.24 15.5 13.43 15.46 13.63 15.23C13.83 15 14.5 14.23 14.73 13.93C14.95 13.63 15.18 13.69 15.48 13.79C15.78 13.89 17.21 14.54 17.54 14.7C17.87 14.86 18.09 14.94 18.16 15.09C18.24 15.23 18.24 15.91 16.64 15.55Z"/>
                     </svg>
-                    WhatsApp Now
+                    Get a Quote
                 </a>
-                <a href="tel:+971523089966" class="cta call-btn">
-                    <svg class="phone-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" fill="currentColor"/>
+                <a href="tel:+971523089966" class="banner-button secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z"/>
                     </svg>
                     Call Now
                 </a>
             </div>
         </div>
+        <!-- <div class="banner-image">
+            <img src="images/van-rental-banner.jpg" alt="Premium Van Rental Service">
+        </div> -->
     </section>
 
     <!-- Main Content -->
     <main class="service-content">
-        <section class="service-features">
-            <h2>Premium Monthly Van Rental Solutions</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Flexible Terms</h3>
-                    <p>Customizable rental periods</p>
+        <section class="content-section benefits-section">
+            <div class="section-container">
+                <div class="section-title">
+                    <h2>Premium Long-Term Van Rental Benefits</h2>
+                    <p class="subtitle">Discover unmatched advantages of our professional long-term van rental services</p>
                 </div>
-                <div class="feature-card">
-                    <h3>Maintained Fleet</h3>
-                    <p>Regular service and maintenance</p>
-                </div>
-                <div class="feature-card">
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock assistance</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Competitive Rates</h3>
-                    <p>Best value for long-term rentals</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="service-description">
-            <h2>Long-Term Van Rental Benefits</h2>
-            <div class="description-content">
-                <p>Our monthly van rental service provides flexible and cost-effective transportation solutions for businesses and individuals in Dubai. Enjoy the convenience of a dedicated vehicle without the commitment of ownership.</p>
-                
-                <h3>Service Benefits:</h3>
-                <ul>
-                    <li>No long-term commitment</li>
-                    <li>Flexible rental periods</li>
-                    <li>Regular maintenance included</li>
-                    <li>Replacement vehicle service</li>
-                    <li>Comprehensive insurance</li>
-                    <li>24/7 roadside assistance</li>
-                </ul>
-
-                <h3>Additional Features:</h3>
-                <ul>
-                    <li>Professional drivers available</li>
-                    <li>GPS tracking system</li>
-                    <li>Fuel management options</li>
-                    <li>Customizable mileage packages</li>
-                    <li>Corporate billing solutions</li>
-                    <li>Priority customer support</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="vehicle-options">
-            <h2>Monthly Rental Fleet</h2>
-            <div class="vehicle-grid">
-                <div class="vehicle-card">
-                    <h3>Toyota Hiace</h3>
-                    <p class="price">From AED 3,500/month</p>
-                    <ul>
-                        <li>13-seater capacity</li>
-                        <li>Ideal for staff transport</li>
-                        <li>Comfortable interior</li>
-                        <li>Regular maintenance</li>
-                    </ul>
-                </div>
-                <div class="vehicle-card">
-                    <h3>Nissan NV350</h3>
-                    <p class="price">From AED 4,000/month</p>
-                    <ul>
-                        <li>15-seater capacity</li>
-                        <li>Perfect for groups</li>
-                        <li>Enhanced comfort</li>
-                        <li>Modern features</li>
-                    </ul>
-                </div>
-                <div class="vehicle-card">
-                    <h3>Luxury Van</h3>
-                    <p class="price">From AED 5,000/month</p>
-                    <ul>
-                        <li>Premium interior</li>
-                        <li>Executive transport</li>
-                        <li>Advanced features</li>
-                        <li>VIP service</li>
-                    </ul>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Flexible Terms</h3>
+                        <ul class="feature-list">
+                            <li>No long-term commitment</li>
+                            <li>Customizable rental periods</li>
+                            <li>Adjustable mileage packages</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Maintained Fleet</h3>
+                        <p>Regular service and maintenance</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock assistance</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Competitive Rates</h3>
+                        <p>Best value for long-term rentals</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="rental-plans">
-            <h2>Monthly Rental Plans</h2>
-            <div class="plan-grid">
-                <div class="plan-card">
-                    <h3>Basic Plan</h3>
-                    <p class="price">From AED 3,500/month</p>
-                    <ul>
-                        <li>Standard vehicle</li>
-                        <li>Basic insurance</li>
-                        <li>Regular maintenance</li>
-                        <li>24/7 support</li>
-                    </ul>
+        <section class="content-section fleet-section">
+            <div class="section-container">
+                <div class="section-title">
+                    <h2>Exclusive Van Fleet Selection</h2>
+                    <p class="subtitle">Choose from our premium collection of well-maintained vans</p>
                 </div>
-                <div class="plan-card">
-                    <h3>Business Plan</h3>
-                    <p class="price">From AED 4,500/month</p>
-                    <ul>
-                        <li>Premium vehicle</li>
-                        <li>Comprehensive insurance</li>
-                        <li>Priority maintenance</li>
-                        <li>GPS tracking</li>
-                        <li>Fuel management</li>
-                    </ul>
-                </div>
-                <div class="plan-card">
-                    <h3>Premium Plan</h3>
-                    <p class="price">From AED 5,500/month</p>
-                    <ul>
-                        <li>Luxury vehicle</li>
-                        <li>Full coverage insurance</li>
-                        <li>VIP maintenance</li>
-                        <li>Professional driver</li>
-                        <li>Unlimited mileage</li>
-                    </ul>
+                <div class="fleet-grid">
+                    <div class="vehicle-card">
+                        <div class="vehicle-image" style="background-image: url('images/toyota-hiace.jpg');"></div>
+                        <div class="vehicle-content">
+                            <h3 class="vehicle-title">Toyota Hiace</h3>
+                            <p class="vehicle-price">From AED 3,500/month</p>
+                            <ul class="feature-list">
+                                <li>13-seater capacity</li>
+                                <li>Ideal for staff transport</li>
+                                <li>Regular maintenance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="vehicle-card">
+                        <div class="vehicle-image" style="background-image: url('images/nissan-nv350.jpg');"></div>
+                        <div class="vehicle-content">
+                            <h3 class="vehicle-title">Nissan NV350</h3>
+                            <p class="vehicle-price">From AED 4,000/month</p>
+                            <ul class="feature-list">
+                                <li>15-seater capacity</li>
+                                <li>Perfect for groups</li>
+                                <li>Enhanced comfort</li>
+                                <li>Modern features</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="vehicle-card">
+                        <div class="vehicle-image" style="background-image: url('images/luxury-van.jpg');"></div>
+                        <div class="vehicle-content">
+                            <h3 class="vehicle-title">Luxury Van</h3>
+                            <p class="vehicle-price">From AED 5,000/month</p>
+                            <ul class="feature-list">
+                                <li>Premium interior</li>
+                                <li>Executive transport</li>
+                                <li>Advanced features</li>
+                                <li>VIP service</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="rental-process">
-            <h2>How to Rent</h2>
-            <div class="process-steps">
-                <div class="step">
+        <section class="content-section plans-section">
+            <div class="section-container">
+                <div class="section-title">
+                    <h2>Customized Rental Plans</h2>
+                    <p class="subtitle">Choose from our flexible rental packages designed to accommodate your specific requirements</p>
+                </div>
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <h3 class="plan-name">Basic Plan</h3>
+                        <p class="plan-price">From AED 3,500/month</p>
+                        <ul class="feature-list">
+                            <li>Standard vehicle</li>
+                            <li>Basic insurance</li>
+                            <li>Regular maintenance</li>
+                            <li>24/7 support</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3 class="plan-name">Business Plan</h3>
+                        <p class="plan-price">From AED 4,500/month</p>
+                        <ul class="feature-list">
+                            <li>Premium vehicle</li>
+                            <li>Comprehensive insurance</li>
+                            <li>Priority maintenance</li>
+                            <li>GPS tracking</li>
+                            <li>Fuel management</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3 class="plan-name">Premium Plan</h3>
+                        <p class="plan-price">From AED 5,500/month</p>
+                        <ul class="feature-list">
+                            <li>Luxury vehicle</li>
+                            <li>Full coverage insurance</li>
+                            <li>VIP maintenance</li>
+                            <li>Professional driver</li>
+                            <li>Unlimited mileage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process-section">
+            <div class="section-title">
+                <h2>Easy 4-Step Rental Process</h2>
+                <p class="subtitle">Experience our streamlined rental process designed for your convenience</p>
+            </div>
+            <p class="section-description">Get started with our straightforward four-step rental process.</p>
+            <div class="process-grid">
+                <div class="process-step">
                     <span class="step-number">1</span>
                     <h3>Choose Vehicle</h3>
                     <p>Select your preferred van</p>
                 </div>
-                <div class="step">
+                <div class="process-step">
                     <span class="step-number">2</span>
                     <h3>Submit Documents</h3>
                     <p>Complete rental requirements</p>
                 </div>
-                <div class="step">
+                <div class="process-step">
                     <span class="step-number">3</span>
                     <h3>Sign Agreement</h3>
                     <p>Review and confirm terms</p>
                 </div>
-                <div class="step">
+                <div class="process-step">
                     <span class="step-number">4</span>
                     <h3>Start Rental</h3>
                     <p>Begin your monthly service</p>
@@ -199,12 +743,16 @@
             </div>
         </section>
 
-        <section class="requirements">
-            <h2>Rental Requirements</h2>
+        <section class="requirements-section">
+            <div class="section-title">
+                <h2>Essential Rental Requirements</h2>
+                <p class="subtitle">Simple documentation process to get you started with your van rental journey</p>
+            </div>
+            <p class="section-description">Everything you need to know to start your van rental journey with us.</p>
             <div class="requirements-grid">
                 <div class="requirement-card">
-                    <h3>Individual Rentals</h3>
-                    <ul>
+                    <h3 class="requirement-title">Individual Rentals</h3>
+                    <ul class="feature-list">
                         <li>Valid UAE driving license</li>
                         <li>Emirates ID</li>
                         <li>Passport copy</li>
@@ -212,8 +760,8 @@
                     </ul>
                 </div>
                 <div class="requirement-card">
-                    <h3>Corporate Rentals</h3>
-                    <ul>
+                    <h3 class="requirement-title">Corporate Rentals</h3>
+                    <ul class="feature-list">
                         <li>Trade license</li>
                         <li>Company documents</li>
                         <li>Authorized signatory</li>
@@ -224,21 +772,25 @@
         </section>
 
         <section class="cta-section">
-            <h2>Start Your Monthly Rental</h2>
-            <p>Contact us to discuss your long-term van rental needs</p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/+971523089966" class="cta whatsapp-btn">
-                    <svg class="whatsapp-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 15.55C16.4 16.31 15.3 16.96 14.47 17.14C13.93 17.26 13.23 17.35 10.76 16.35C7.7 15.12 5.72 12.03 5.57 11.84C5.43 11.65 4.43 10.31 4.43 8.93C4.43 7.55 5.13 6.89 5.41 6.61C5.68 6.33 6.01 6.24 6.21 6.24C6.41 6.24 6.61 6.24 6.78 6.25C7.03 6.26 7.21 6.27 7.42 6.86C7.66 7.57 8.38 8.95 8.45 9.1C8.53 9.25 8.58 9.43 8.47 9.64C7.95 10.73 7.39 10.67 7.81 11.37C9.21 13.89 10.63 14.47 12.94 15.37C13.24 15.5 13.43 15.46 13.63 15.23C13.83 15 14.5 14.23 14.73 13.93C14.95 13.63 15.18 13.69 15.48 13.79C15.78 13.89 17.21 14.54 17.54 14.7C17.87 14.86 18.09 14.94 18.16 15.09C18.24 15.23 18.24 15.91 16.64 15.55Z" fill="currentColor"/>
-                    </svg>
-                    Get Quote
-                </a>
-                <a href="tel:+971523089966" class="cta call-btn">
-                    <svg class="phone-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" fill="currentColor"/>
-                    </svg>
-                    Discuss Options
-                </a>
+            <div class="section-container">
+                <div class="section-title" style="margin: 0 0 2rem;">
+                    <h2 style="color: var(--white);">Start Your Premium Van Rental</h2>
+                    <p class="subtitle" style="color: var(--white); opacity: 0.95;">Connect with our expert team today</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/+971523089966" class="cta whatsapp-btn">
+                        <svg class="whatsapp-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 15.55C16.4 16.31 15.3 16.96 14.47 17.14C13.93 17.26 13.23 17.35 10.76 16.35C7.7 15.12 5.72 12.03 5.57 11.84C5.43 11.65 4.43 10.31 4.43 8.93C4.43 7.55 5.13 6.89 5.41 6.61C5.68 6.33 6.01 6.24 6.21 6.24C6.41 6.24 6.61 6.24 6.78 6.25C7.03 6.26 7.21 6.27 7.42 6.86C7.66 7.57 8.38 8.95 8.45 9.1C8.53 9.25 8.58 9.43 8.47 9.64C7.95 10.73 7.39 10.67 7.81 11.37C9.21 13.89 10.63 14.47 12.94 15.37C13.24 15.5 13.43 15.46 13.63 15.23C13.83 15 14.5 14.23 14.73 13.93C14.95 13.63 15.18 13.69 15.48 13.79C15.78 13.89 17.21 14.54 17.54 14.7C17.87 14.86 18.09 14.94 18.16 15.09C18.24 15.23 18.24 15.91 16.64 15.55Z" fill="currentColor"/>
+                        </svg>
+                        Get Quote
+                    </a>
+                    <a href="tel:+971523089966" class="cta call-btn">
+                        <svg class="phone-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" fill="currentColor"/>
+                        </svg>
+                        Discuss Options
+                    </a>
+                </div>
             </div>
         </section>
     </main>

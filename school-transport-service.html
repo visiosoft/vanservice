@@ -21,6 +21,283 @@
     
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+    .service-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .school-hero {
+        background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 183, 241, 0.85)),
+                    url('images/school-transport-service.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 6rem 0;
+        text-align: center;
+        color: #fff;
+    }
+
+    .school-hero h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .school-hero p {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .service-features {
+        padding: 4rem 0;
+        background: var(--light-bg);
+        border-radius: 16px;
+        margin: 3rem 0;
+    }
+
+    .service-features h2,
+    .service-description h2,
+    .vehicle-options h2,
+    .service-plans h2,
+    .safety-measures h2,
+    .booking-process h2 {
+        font-size: 2.2rem;
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 2.5rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .feature-card h3,
+    .vehicle-card h3,
+    .plan-card h3,
+    .measure-card h3,
+    .step h3 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    .service-description h3 {
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        margin: 2rem 0 1rem;
+        font-weight: 600;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .feature-card {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-card p {
+        color: var(--text-color);
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .service-description {
+        padding: 3rem;
+        background: #fff;
+        border-radius: 16px;
+        margin: 3rem 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .service-description p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-color);
+        margin-bottom: 2rem;
+    }
+
+    .service-description ul,
+    .vehicle-card ul,
+    .plan-card ul,
+    .measure-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .service-description li,
+    .vehicle-card li,
+    .plan-card li,
+    .measure-card li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.8rem;
+        font-size: 1.1rem;
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+
+    .service-description li::before,
+    .vehicle-card li::before,
+    .plan-card li::before,
+    .measure-card li::before {
+        content: "•";
+        color: var(--accent-color);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+
+    .vehicle-grid,
+    .plan-grid,
+    .measures-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .vehicle-card,
+    .plan-card,
+    .measure-card {
+        background: #fff;
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+    }
+
+    .vehicle-card:hover,
+    .plan-card:hover,
+    .measure-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .price {
+        font-size: 1.8rem;
+        color: var(--accent-color);
+        font-weight: 700;
+        margin: 1rem 0;
+    }
+
+    .booking-process {
+        padding: 4rem 2rem;
+        background: var(--light-bg);
+        border-radius: 16px;
+        margin: 3rem 0;
+    }
+
+    .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .step {
+        text-align: center;
+        padding: 2rem;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: #fff;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .step p {
+        color: var(--text-color);
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+    }
+
+    .cta-section {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: var(--light-bg);
+        border-radius: 16px;
+        margin: 3rem 0;
+    }
+
+    .cta-section h2 {
+        font-size: 2.2rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .cta-section p {
+        font-size: 1.2rem;
+        color: var(--text-color);
+        margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .school-hero h1 {
+            font-size: 2.2rem;
+        }
+
+        .school-hero p {
+            font-size: 1.2rem;
+        }
+
+        .service-features h2,
+        .service-description h2,
+        .vehicle-options h2,
+        .service-plans h2,
+        .safety-measures h2,
+        .booking-process h2,
+        .cta-section h2 {
+            font-size: 1.8rem;
+        }
+
+        .feature-card h3,
+        .vehicle-card h3,
+        .plan-card h3,
+        .measure-card h3,
+        .step h3 {
+            font-size: 1.3rem;
+        }
+
+        .service-description {
+            padding: 2rem;
+        }
+
+        .price {
+            font-size: 1.6rem;
+        }
+
+        .process-steps {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
 </head>
 <body>
     <!-- Header Template Include -->
