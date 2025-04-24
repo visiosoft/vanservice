@@ -52,10 +52,38 @@
 
         .blog-featured-image {
             width: 100%;
-            max-height: 400px;
+            max-width: 600px;
+            height: 400px;
             object-fit: cover;
-            margin-bottom: 2rem;
-            border-radius: 8px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .blog-featured-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card {
+            overflow: hidden;
+            position: relative;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        .blog-card:hover .blog-image {
+            transform: scale(1.05);
         }
 
         .blog-content {
@@ -169,12 +197,51 @@
         }
 
         .comparison-table th {
-            background: var(--primary-color);
+            background: var(--primary);
             color: var(--white);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .comparison-table td {
+            color: var(--text-dark);
         }
 
         .comparison-table tr:nth-child(even) {
-            background: var(--light-bg);
+            background: var(--gray-bg);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-featured-image {
+                height: 300px;
+            }
+            .blog-image {
+                height: 180px;
+            }
         }
     </style>
 </head>
@@ -223,7 +290,14 @@
                 </div>
             </header>
 
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/af/94/79/caption.jpg?w=600&h=600&s=1" alt="Dubai Van Rental Guide - Choosing the Right Van" class="blog-featured-image" loading="lazy">
+            <img 
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/af/94/79/caption.jpg?w=600&h=400&s=1" 
+                alt="Dubai Van Rental Guide - Choosing the Right Van" 
+                class="blog-featured-image" 
+                loading="lazy"
+                width="600"
+                height="400"
+            >
 
             <div class="blog-content">
                 <p>Choosing the right van for your needs in Dubai can be overwhelming with so many options available. This comprehensive guide will help you make an informed decision based on your specific requirements.</p>
@@ -346,7 +420,14 @@
                 <h2>Related Articles</h2>
                 <div class="related-grid">
                     <article class="blog-card">
-                        <img src="../assets/images/blog/corporate-transport-dubai.webp" alt="Corporate transport solutions in Dubai" class="blog-image" loading="lazy">
+                        <img 
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvGfHfPti9xtaxN_TKgYBEttwq7JXCAASBRQ&s" 
+                            alt="Corporate transport solutions in Dubai" 
+                            class="blog-image" 
+                            loading="lazy"
+                            width="400"
+                            height="220"
+                        >
                         <div class="blog-content">
                             <div class="blog-meta">March 12, 2024 • 4 min read</div>
                             <h3 class="blog-title">Corporate Transport Solutions</h3>
@@ -355,7 +436,14 @@
                     </article>
 
                     <article class="blog-card">
-                        <img src="../assets/images/blog/dubai-transportation-guide.webp" alt="Complete guide to Dubai transportation" class="blog-image" loading="lazy">
+                        <img 
+                            src="https://cdn-imgix.headout.com/mircobrands-content/image/964741f6536cfa1f31ee2b667382e313-pexels-denys-gromov-4491945.jpg?auto=format&w=400&h=220&q=80&fit=crop&ar=16:9" 
+                            alt="Complete guide to Dubai transportation" 
+                            class="blog-image" 
+                            loading="lazy"
+                            width="400"
+                            height="220"
+                        >
                         <div class="blog-content">
                             <div class="blog-meta">March 15, 2024 • 5 min read</div>
                             <h3 class="blog-title">Ultimate Guide to Dubai Transportation</h3>
@@ -364,7 +452,14 @@
                     </article>
 
                     <article class="blog-card">
-                        <img src="../assets/images/blog/airport-transfer-dubai.webp" alt="Dubai Airport Transfer Guide" class="blog-image" loading="lazy">
+                        <img 
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbGc-j2kZMtELQomCvcQYF-e3GwRmX-q-sg&s" 
+                            alt="Dubai Airport Transfer Guide" 
+                            class="blog-image" 
+                            loading="lazy"
+                            width="400"
+                            height="220"
+                        >
                         <div class="blog-content">
                             <div class="blog-meta">March 5, 2024 • 3 min read</div>
                             <h3 class="blog-title">Dubai Airport Transfer Guide</h3>

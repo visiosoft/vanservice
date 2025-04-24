@@ -45,6 +45,373 @@
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="canonical" href="https://dubaivansrental.com/blog/corporate-transport-solutions-dubai.html">
+    <style>
+        /* Modern Website Styles */
+        :root {
+            --primary: #FF6B6B;
+            --secondary: #4ECDC4;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --gray: #f8f9fa;
+            --text: #2c3e50;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        .blog-header {
+            position: relative;
+            background: #2c3e50;
+            color: var(--light);
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+
+        .blog-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+            opacity: 0.8;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--light);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+            max-width: 80%;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation */
+        nav {
+            padding: 1rem 2rem;
+            background: var(--light);
+        }
+
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .logo a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .logo a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 0;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        /* Grid Layouts */
+        .services-grid, .benefits-grid, .fleet-grid, .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Card Styles */
+        .service-card, .benefit-item, .vehicle-card, .package-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover, .benefit-item:hover, .vehicle-card:hover, .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        li::before {
+            content: "→";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Featured Package Styles */
+        .package-card.featured {
+            background: #2c3e50;
+            color: var(--light);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            transform: translateY(-10px);
+        }
+
+        .package-card.featured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #2c3e50, rgba(44, 62, 80, 0.8));
+            opacity: 0.1;
+        }
+
+        .package-card.featured h3 {
+            color: var(--light);
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .package-card.featured h3::after {
+            content: 'RECOMMENDED';
+            position: absolute;
+            top: -30px;
+            right: -20px;
+            background: var(--secondary);
+            color: #2c3e50;
+            font-size: 0.8rem;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            transform: rotate(15deg);
+        }
+
+        .package-card.featured li {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .package-card.featured li::before {
+            color: var(--secondary);
+        }
+
+        .package-card.featured .btn-primary {
+            background: var(--light);
+            color: #2c3e50;
+            font-weight: 700;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .package-card.featured .btn-primary:hover {
+            background: transparent;
+            color: var(--light);
+            border-color: var(--light);
+        }
+
+        .package-card.featured:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(44, 62, 80, 0.2);
+        }
+
+        /* Form Styles */
+        .contact-section {
+            background: var(--gray);
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        label {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--light);
+            padding: 0 0.5rem;
+            color: #666;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        input:focus ~ label, input:not(:placeholder-shown) ~ label,
+        select:focus ~ label, select:not(:placeholder-shown) ~ label,
+        textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label {
+            top: 0;
+            font-size: 0.8rem;
+            color: var(--secondary);
+        }
+
+        /* Button Styles */
+        .btn-primary, .learn-more {
+            background: linear-gradient(45deg, #2c3e50, var(--secondary));
+            color: var(--light);
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover, .learn-more:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(44, 62, 80, 0.2);
+            background: linear-gradient(45deg, var(--secondary), #2c3e50);
+        }
+
+        .learn-more {
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Update CTA button in featured package */
+        .package-card.featured .btn-primary {
+            background: var(--light);
+            color: #2c3e50;
+        }
+
+        .package-card.featured .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.4rem;
+                max-width: 100%;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="blog-header">

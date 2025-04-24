@@ -27,145 +27,279 @@
 
     <!-- Blog post specific styles -->
     <style>
-        /* Reusing the same styles as other blog posts */
+        /* Global Styles */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #4ECDC4;
+            --text-dark: #2c3e50;
+            --text-light: #666;
+            --white: #ffffff;
+            --gray-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        /* Blog Post Layout */
         .blog-post {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
         }
 
+        /* Header Styles */
         .blog-header {
-            margin-bottom: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 4rem 2rem;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+            opacity: 0.1;
+        }
+
+        .blog-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
 
         .blog-meta {
             display: flex;
+            justify-content: center;
             gap: 2rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
         }
 
-        .blog-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        /* Content Styles */
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
         }
 
         .blog-featured-image {
             width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: var(--border-radius);
-            margin-bottom: 2rem;
-        }
-
-        .blog-content {
-            line-height: 1.8;
-            color: var(--text-color);
+            height: auto;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .blog-content h2 {
-            color: var(--primary-color);
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin: 3rem 0 1.5rem;
+            font-weight: 600;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .blog-content h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .blog-content h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
             margin: 2rem 0 1rem;
+            font-weight: 500;
         }
 
         .blog-content p {
             margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .blog-content ul,
         .blog-content ol {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            padding-left: 0;
+            list-style: none;
         }
 
         .blog-content li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 2rem;
+            color: var(--text-dark);
         }
 
-        .blog-tags {
-            display: flex;
-            gap: 1rem;
+        .blog-content li::before {
+            content: "→";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Info Box Styles */
+        .info-box {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 2rem;
+            border-radius: 15px;
             margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .blog-tag {
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            background: var(--light-bg);
-            color: var(--text-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .blog-tag:hover {
-            background: var(--primary-color);
             color: var(--white);
+            position: relative;
+            overflow: hidden;
         }
 
+        .info-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
+            z-index: 1;
+        }
+
+        .info-box h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .info-box ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .info-box li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .info-box li::before {
+            content: "•";
+            color: var(--white);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Share Section */
         .share-section {
-            margin: 2rem 0;
-            padding: 2rem 0;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+            margin: 4rem 0;
+            padding: 2rem;
+            background: var(--gray-bg);
+            border-radius: 15px;
         }
 
-        .share-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
+        .share-section h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
         }
 
-        .share-button {
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            color: var(--white);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .share-button.facebook {
-            background: #1877f2;
-        }
-
-        .share-button.twitter {
-            background: #1da1f2;
-        }
-
-        .share-button.whatsapp {
-            background: #25d366;
-        }
-
-        .share-button:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-
+        /* Related Posts */
         .related-posts {
-            margin-top: 3rem;
+            margin-top: 4rem;
+        }
+
+        .related-posts h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
         .related-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
         }
 
-        .info-box {
-            background: var(--light-bg);
+        .blog-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card .blog-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-card .blog-content {
             padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin: 2rem 0;
         }
 
-        .info-box h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
+        .blog-card .blog-title {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blog-header {
+                padding: 3rem 1.5rem;
+            }
+
+            .blog-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .blog-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .blog-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .blog-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .info-box {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -214,7 +348,7 @@
                 </div>
             </header>
 
-            <img src="../assets/images/blog/airport-transfer-dubai.webp" alt="Professional airport transfer service in Dubai" class="blog-featured-image" loading="lazy">
+            <img src="https://noorislamtransport.ae/admin/image/airport%20transportation.jpg" alt="Professional airport transfer service in Dubai" class="blog-featured-image" loading="lazy">
 
             <div class="blog-content">
                 <p>Dubai International Airport (DXB) is one of the world's busiest airports, handling millions of passengers annually. Whether you're arriving for business or leisure, understanding your airport transfer options is crucial for a smooth start to your Dubai journey.</p>
@@ -310,7 +444,7 @@
                 <h2>Related Articles</h2>
                 <div class="related-grid">
                     <article class="blog-card">
-                        <img src="../assets/images/blog/corporate-transport-dubai.webp" alt="Corporate transport solutions in Dubai" class="blog-image" loading="lazy">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/e9/e4/45/our-company-providing.jpg" alt="Corporate transport solutions in Dubai" class="blog-image" loading="lazy">
                         <div class="blog-content">
                             <div class="blog-meta">March 12, 2024 • 4 min read</div>
                             <h3 class="blog-title">Corporate Transport Solutions</h3>
@@ -319,7 +453,7 @@
                     </article>
 
                     <article class="blog-card">
-                        <img src="../assets/images/blog/van-rental-guide.webp" alt="Guide to choosing the right van" class="blog-image" loading="lazy">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6vPewncGKcCR50YGfCurY6-Bm09iyvBAjpw&s" alt="Guide to choosing the right van" class="blog-image" loading="lazy">
                         <div class="blog-content">
                             <div class="blog-meta">March 8, 2024 • 4 min read</div>
                             <h3 class="blog-title">How to Choose the Right Van</h3>
@@ -328,7 +462,7 @@
                     </article>
 
                     <article class="blog-card">
-                        <img src="../assets/images/blog/dubai-transportation-guide.webp" alt="Complete guide to Dubai transportation" class="blog-image" loading="lazy">
+                        <img src="https://www.timeoutabudhabi.com/cloud/timeoutabudhabi/2023/08/04/Abu-Dhabi-to-Dubai-by-bus2-1024x768.jpg" alt="Complete guide to Dubai transportation" class="blog-image" loading="lazy">
                         <div class="blog-content">
                             <div class="blog-meta">March 15, 2024 • 5 min read</div>
                             <h3 class="blog-title">Ultimate Guide to Dubai Transportation</h3>

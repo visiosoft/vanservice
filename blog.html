@@ -37,16 +37,7 @@
         }
 
         .hero-content h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--accent-color);
-            border-radius: 2px;
-            opacity: 0.8;
+            display: none;
         }
 
         .hero-content p {
@@ -107,7 +98,7 @@
             }
 
             .hero-content p {
-                font-size: 1.2rem;
+            font-size: 1.2rem;
             }
 
             .blog-hero {
@@ -142,9 +133,9 @@
 
         .category-tag:hover,
         .category-tag.active {
-            background: var(--primary-color);
-            color: var(--white);
-            border-color: var(--primary-color);
+            background: #2c3e50;
+            color: #ffffff;
+            border-color: #2c3e50;
         }
 
         .blog-grid {
@@ -166,6 +157,7 @@
 
         .blog-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.15);
         }
 
         .blog-image {
@@ -207,6 +199,7 @@
         }
 
         .read-more:hover {
+            color: #2c3e50;
             gap: 0.75rem;
         }
 
@@ -233,9 +226,9 @@
 
         .page-link:hover,
         .page-link.active {
-            background: var(--primary-color);
-            color: var(--white);
-            border-color: var(--primary-color);
+            background: #2c3e50;
+            color: #ffffff;
+            border-color: #2c3e50;
         }
 
         .newsletter-section {
@@ -275,7 +268,9 @@
         }
 
         .newsletter-button:hover {
-            background: var(--primary-dark);
+            background: #2c3e50;
+            color: #ffffff;
+            border-color: #2c3e50;
         }
 
         .location-services {
@@ -319,11 +314,12 @@
 
         .location-card:hover {
             transform: translateY(-5px);
+            background: #2c3e50;
+            color: #ffffff;
         }
 
-        .location-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+        .location-card:hover h3 {
+            color: #ffffff;
         }
 
         .location-card p {
@@ -374,12 +370,12 @@
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: #2c3e50;
+            color: #ffffff;
         }
 
-        .service-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+        .service-card:hover h3 {
+            color: #ffffff;
         }
 
         .service-card p {

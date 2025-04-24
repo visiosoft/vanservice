@@ -27,132 +27,353 @@
 
     <!-- Blog post specific styles -->
     <style>
+        /* Global Styles */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #4ECDC4;
+            --text-dark: #2c3e50;
+            --text-light: #666;
+            --white: #ffffff;
+            --gray-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        /* Header and Navigation */
+        .header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            position: relative;
+        }
+
+        /* Main Content Styles */
+        .service-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Blog Post Styles */
         .blog-post {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
         }
 
         .blog-header {
-            margin-bottom: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 0;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .blog-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .blog-meta {
             display: flex;
+            justify-content: center;
             gap: 2rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
         }
 
-        .blog-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
+        /* Image Styles and Animations */
         .blog-featured-image {
             width: 100%;
+            max-width: 600px;
             height: 400px;
             object-fit: cover;
-            border-radius: var(--border-radius);
-            margin-bottom: 2rem;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .blog-featured-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card {
+            overflow: hidden;
+            position: relative;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        .blog-card:hover .blog-image {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-featured-image {
+                height: 300px;
+            }
+            .blog-image {
+                height: 180px;
+            }
         }
 
         .blog-content {
+            font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--text-color);
+            color: var(--text-dark);
         }
 
         .blog-content h2 {
-            color: var(--primary-color);
-            margin: 2rem 0 1rem;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin: 3rem 0 1.5rem;
+            font-weight: 600;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .blog-content h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            border-radius: 2px;
         }
 
         .blog-content p {
             margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        .blog-content ul,
+        .blog-content ul, 
         .blog-content ol {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            padding-left: 0;
         }
 
         .blog-content li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 2rem;
+            color: var(--text-dark);
         }
 
+        .blog-content li::before {
+            content: "→";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Tags Section */
         .blog-tags {
             display: flex;
             gap: 1rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
             flex-wrap: wrap;
         }
 
         .blog-tag {
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            background: var(--light-bg);
-            color: var(--text-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            background: var(--gray-bg);
+            color: var(--primary);
             text-decoration: none;
-            transition: var(--transition);
+            transition: all 0.3s ease;
+            font-weight: 500;
         }
 
         .blog-tag:hover {
-            background: var(--primary-color);
+            background: var(--primary);
             color: var(--white);
-        }
-
-        .share-section {
-            margin: 2rem 0;
-            padding: 2rem 0;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .share-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .share-button {
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            color: var(--white);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .share-button.facebook {
-            background: #1877f2;
-        }
-
-        .share-button.twitter {
-            background: #1da1f2;
-        }
-
-        .share-button.whatsapp {
-            background: #25d366;
-        }
-
-        .share-button:hover {
-            opacity: 0.9;
             transform: translateY(-2px);
         }
 
+        /* Share Section */
+        .share-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--gray-bg);
+            border-radius: 15px;
+        }
+
+        .share-section h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Related Posts */
         .related-posts {
-            margin-top: 3rem;
+            margin-top: 4rem;
+        }
+
+        .related-posts h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
         .related-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card .blog-title {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        .read-more {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 15px;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
             gap: 2rem;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cta {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: var(--white);
+        }
+
+        .call-btn {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blog-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .blog-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .blog-meta {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
     </style>
 </head>
@@ -201,7 +422,14 @@
                 </div>
             </header>
 
-            <img src="../assets/images/blog/corporate-transport-dubai.webp" alt="Professional corporate transportation solutions in Dubai for business travelers" class="blog-featured-image" loading="lazy">
+            <img 
+                src="https://alweamtransport.com/assets/images/2025/03/03/chauffeur-bus-rental-dubai.webp?w=600&h=400&q=80" 
+                alt="Professional corporate transportation solutions in Dubai for business travelers" 
+                class="blog-featured-image" 
+                loading="lazy"
+                width="600"
+                height="400"
+            >
 
             <div class="blog-content">
                 <p>In Dubai's fast-paced business environment, reliable corporate transportation is essential for success. Whether you're organizing transport for executives, managing corporate events, or coordinating team movements, having the right transportation solution can make a significant difference.</p>
@@ -282,7 +510,14 @@
                 <h2>Related Articles</h2>
                 <div class="related-grid">
                     <article class="blog-card">
-                        <img src="../assets/images/blog/dubai-transportation-guide.webp" alt="Complete guide to Dubai transportation options" class="blog-image" loading="lazy">
+                        <img 
+                            src="https://www.propertyfinder.ae/blog/wp-content/uploads/2023/02/shutterstock_2103895436-1-800x462.jpg" 
+                            alt="Complete guide to Dubai transportation options" 
+                            class="blog-image" 
+                            loading="lazy"
+                            width="400"
+                            height="220"
+                        >
                         <div class="blog-content">
                             <div class="blog-meta">March 15, 2024 • 5 min read</div>
                             <h3 class="blog-title">Ultimate Guide to Dubai Transportation</h3>
@@ -291,7 +526,14 @@
                     </article>
 
                     <article class="blog-card">
-                        <img src="../assets/images/blog/airport-transfer-dubai.webp" alt="Dubai Airport Transfer Guide" class="blog-image" loading="lazy">
+                        <img 
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjj-mhflTyFNBl--dygsOX7DxmWaZT23_W6w&s" 
+                            alt="Dubai Airport Transfer Guide" 
+                            class="blog-image" 
+                            loading="lazy"
+                            width="400"
+                            height="220"
+                        >
                         <div class="blog-content">
                             <div class="blog-meta">March 5, 2024 • 3 min read</div>
                             <h3 class="blog-title">Dubai Airport Transfer Guide</h3>
@@ -300,7 +542,14 @@
                     </article>
 
                     <article class="blog-card">
-                        <img src="../assets/images/blog/van-rental-guide.webp" alt="Guide to choosing the right van" class="blog-image" loading="lazy">
+                        <img 
+                            src="https://www.rentanycar.ae/wp-content/uploads/2023/01/Rent-a-Van-in-Dubai.webp" 
+                            alt="Guide to choosing the right van" 
+                            class="blog-image" 
+                            loading="lazy"
+                            width="400"
+                            height="220"
+                        >
                         <div class="blog-content">
                             <div class="blog-meta">March 8, 2024 • 4 min read</div>
                             <h3 class="blog-title">How to Choose the Right Van</h3>
