@@ -1,270 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Transport Service Dubai | Safe School Van Rental</title>
-    <meta name="description" content="Professional school transport service in Dubai. Safe and reliable van service for schools and educational institutions. Book your school transport now!">
-    <meta name="keywords" content="school transport dubai, school van service dubai, student transportation dubai, school bus rental dubai, safe school transport uae">
-    
+    <meta name="description"
+        content="Professional school transport service in Dubai. Safe and reliable van service for schools and educational institutions. Book your school transport now!">
+    <meta name="keywords"
+        content="school transport dubai, school van service dubai, student transportation dubai, school bus rental dubai, safe school transport uae">
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="School Transport Service Dubai | Safe School Van Rental">
-    <meta property="og:description" content="Professional school transport service in Dubai. Safe and reliable transportation for students!">
+    <meta property="og:description"
+        content="Professional school transport service in Dubai. Safe and reliable transportation for students!">
     <meta property="og:image" content="images/school-transport-service.jpg">
     <meta property="og:url" content="https://dubaivansrental.com/school-transport-service">
-    
+
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="School Transport Service Dubai | Safe School Van Rental">
-    <meta name="twitter:description" content="Professional school transport service in Dubai. Safe and reliable transportation for students!">
+    <meta name="twitter:description"
+        content="Professional school transport service in Dubai. Safe and reliable transportation for students!">
     <meta name="twitter:image" content="images/school-transport-service.jpg">
-    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "School Transport Service",
+        "name": "School Transport Service Dubai",
+        "description": "Professional school transport service in Dubai. Safe and reliable van service for schools and educational institutions with trained drivers.",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Dubai Vans Rental",
+            "image": "https://dubaivansrental.com/assets/logo.png",
+            "logo": "https://dubaivansrental.com/assets/logo.png",
+            "url": "https://dubaivansrental.com",
+            "telephone": "+971569420950",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Dubai",
+                "addressRegion": "Dubai",
+                "postalCode": "00000",
+                "addressCountry": "AE"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+        }
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-    .service-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
+        .service-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-    .school-hero {
-        background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 183, 241, 0.85)),
-                    url('images/school-transport-service.jpg');
-        background-size: cover;
-        background-position: center;
-        padding: 6rem 0;
-        text-align: center;
-        color: #fff;
-    }
+        .school-hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 183, 241, 0.85)),
+                url('images/school-transport-service.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 6rem 0;
+            text-align: center;
+            color: #fff;
+        }
 
-    .school-hero h1 {
-        font-size: 2.8rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        line-height: 1.2;
-    }
-
-    .school-hero p {
-        font-size: 1.4rem;
-        margin-bottom: 2rem;
-        opacity: 0.9;
-    }
-
-    .service-features {
-        padding: 4rem 0;
-        background: var(--light-bg);
-        border-radius: 16px;
-        margin: 3rem 0;
-    }
-
-    .service-features h2,
-    .service-description h2,
-    .vehicle-options h2,
-    .service-plans h2,
-    .safety-measures h2,
-    .booking-process h2 {
-        font-size: 2.2rem;
-        color: var(--primary-color);
-        text-align: center;
-        margin-bottom: 2.5rem;
-        font-weight: 700;
-        line-height: 1.3;
-    }
-
-    .feature-card h3,
-    .vehicle-card h3,
-    .plan-card h3,
-    .measure-card h3,
-    .step h3 {
-        font-size: 1.5rem;
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-        font-weight: 600;
-    }
-
-    .service-description h3 {
-        font-size: 1.6rem;
-        color: var(--primary-color);
-        margin: 2rem 0 1rem;
-        font-weight: 600;
-    }
-
-    .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        padding: 0 2rem;
-    }
-
-    .feature-card {
-        background: #fff;
-        padding: 2rem;
-        border-radius: 12px;
-        text-align: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease;
-    }
-
-    .feature-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .feature-card p {
-        color: var(--text-color);
-        font-size: 1.1rem;
-        line-height: 1.6;
-    }
-
-    .service-description {
-        padding: 3rem;
-        background: #fff;
-        border-radius: 16px;
-        margin: 3rem 0;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    .service-description p {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: var(--text-color);
-        margin-bottom: 2rem;
-    }
-
-    .service-description ul,
-    .vehicle-card ul,
-    .plan-card ul,
-    .measure-card ul {
-        list-style: none;
-        padding: 0;
-        margin: 1rem 0;
-    }
-
-    .service-description li,
-    .vehicle-card li,
-    .plan-card li,
-    .measure-card li {
-        position: relative;
-        padding-left: 1.5rem;
-        margin-bottom: 0.8rem;
-        font-size: 1.1rem;
-        color: var(--text-color);
-        line-height: 1.6;
-    }
-
-    .service-description li::before,
-    .vehicle-card li::before,
-    .plan-card li::before,
-    .measure-card li::before {
-        content: "•";
-        color: var(--accent-color);
-        position: absolute;
-        left: 0;
-        font-weight: bold;
-    }
-
-    .vehicle-grid,
-    .plan-grid,
-    .measures-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        padding: 0 2rem;
-    }
-
-    .vehicle-card,
-    .plan-card,
-    .measure-card {
-        background: #fff;
-        padding: 2.5rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease;
-    }
-
-    .vehicle-card:hover,
-    .plan-card:hover,
-    .measure-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .price {
-        font-size: 1.8rem;
-        color: var(--accent-color);
-        font-weight: 700;
-        margin: 1rem 0;
-    }
-
-    .booking-process {
-        padding: 4rem 2rem;
-        background: var(--light-bg);
-        border-radius: 16px;
-        margin: 3rem 0;
-    }
-
-    .process-steps {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-    }
-
-    .step {
-        text-align: center;
-        padding: 2rem;
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    .step-number {
-        width: 40px;
-        height: 40px;
-        background: var(--primary-color);
-        color: #fff;
-        border-radius: 50%;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-    }
-
-    .step p {
-        color: var(--text-color);
-        font-size: 1.1rem;
-        margin-top: 0.5rem;
-    }
-
-    .cta-section {
-        text-align: center;
-        padding: 4rem 2rem;
-        background: var(--light-bg);
-        border-radius: 16px;
-        margin: 3rem 0;
-    }
-
-    .cta-section h2 {
-        font-size: 2.2rem;
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-        font-weight: 700;
-    }
-
-    .cta-section p {
-        font-size: 1.2rem;
-        color: var(--text-color);
-        margin-bottom: 2rem;
-    }
-
-    @media (max-width: 768px) {
         .school-hero h1 {
-            font-size: 2.2rem;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
 
         .school-hero p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .service-features {
+            padding: 4rem 0;
+            background: var(--light-bg);
+            border-radius: 16px;
+            margin: 3rem 0;
         }
 
         .service-features h2,
@@ -272,9 +98,13 @@
         .vehicle-options h2,
         .service-plans h2,
         .safety-measures h2,
-        .booking-process h2,
-        .cta-section h2 {
-            font-size: 1.8rem;
+        .booking-process h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+            line-height: 1.3;
         }
 
         .feature-card h3,
@@ -282,23 +112,229 @@
         .plan-card h3,
         .measure-card h3,
         .step h3 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-description h3 {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card p {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
         .service-description {
-            padding: 2rem;
+            padding: 3rem;
+            background: #fff;
+            border-radius: 16px;
+            margin: 3rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-description p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
+
+        .service-description ul,
+        .vehicle-card ul,
+        .plan-card ul,
+        .measure-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .service-description li,
+        .vehicle-card li,
+        .plan-card li,
+        .measure-card li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .service-description li::before,
+        .vehicle-card li::before,
+        .plan-card li::before,
+        .measure-card li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .vehicle-grid,
+        .plan-grid,
+        .measures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .vehicle-card,
+        .plan-card,
+        .measure-card {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .vehicle-card:hover,
+        .plan-card:hover,
+        .measure-card:hover {
+            transform: translateY(-5px);
         }
 
         .price {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .booking-process {
+            padding: 4rem 2rem;
+            background: var(--light-bg);
+            border-radius: 16px;
+            margin: 3rem 0;
         }
 
         .process-steps {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
-    }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .step p {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--light-bg);
+            border-radius: 16px;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .school-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .school-hero p {
+                font-size: 1.2rem;
+            }
+
+            .service-features h2,
+            .service-description h2,
+            .vehicle-options h2,
+            .service-plans h2,
+            .safety-measures h2,
+            .booking-process h2,
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .feature-card h3,
+            .vehicle-card h3,
+            .plan-card h3,
+            .measure-card h3,
+            .step h3 {
+                font-size: 1.3rem;
+            }
+
+            .service-description {
+                padding: 2rem;
+            }
+
+            .price {
+                font-size: 1.6rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Header Template Include -->
     <div id="header-placeholder"></div>
@@ -310,14 +346,20 @@
             <p>Safe and Reliable Student Transportation</p>
             <div class="cta-buttons">
                 <a href="https://wa.me/+971523089966" class="cta whatsapp-btn">
-                    <svg class="whatsapp-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 15.55C16.4 16.31 15.3 16.96 14.47 17.14C13.93 17.26 13.23 17.35 10.76 16.35C7.7 15.12 5.72 12.03 5.57 11.84C5.43 11.65 4.43 10.31 4.43 8.93C4.43 7.55 5.13 6.89 5.41 6.61C5.68 6.33 6.01 6.24 6.21 6.24C6.41 6.24 6.61 6.24 6.78 6.25C7.03 6.26 7.21 6.27 7.42 6.86C7.66 7.57 8.38 8.95 8.45 9.1C8.53 9.25 8.58 9.43 8.47 9.64C7.95 10.73 7.39 10.67 7.81 11.37C9.21 13.89 10.63 14.47 12.94 15.37C13.24 15.5 13.43 15.46 13.63 15.23C13.83 15 14.5 14.23 14.73 13.93C14.95 13.63 15.18 13.69 15.48 13.79C15.78 13.89 17.21 14.54 17.54 14.7C17.87 14.86 18.09 14.94 18.16 15.09C18.24 15.23 18.24 15.91 16.64 15.55Z" fill="currentColor"/>
+                    <svg class="whatsapp-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 15.55C16.4 16.31 15.3 16.96 14.47 17.14C13.93 17.26 13.23 17.35 10.76 16.35C7.7 15.12 5.72 12.03 5.57 11.84C5.43 11.65 4.43 10.31 4.43 8.93C4.43 7.55 5.13 6.89 5.41 6.61C5.68 6.33 6.01 6.24 6.21 6.24C6.41 6.24 6.61 6.24 6.78 6.25C7.03 6.26 7.21 6.27 7.42 6.86C7.66 7.57 8.38 8.95 8.45 9.1C8.53 9.25 8.58 9.43 8.47 9.64C7.95 10.73 7.39 10.67 7.81 11.37C9.21 13.89 10.63 14.47 12.94 15.37C13.24 15.5 13.43 15.46 13.63 15.23C13.83 15 14.5 14.23 14.73 13.93C14.95 13.63 15.18 13.69 15.48 13.79C15.78 13.89 17.21 14.54 17.54 14.7C17.87 14.86 18.09 14.94 18.16 15.09C18.24 15.23 18.24 15.91 16.64 15.55Z"
+                            fill="currentColor" />
                     </svg>
                     WhatsApp Now
                 </a>
                 <a href="tel:+971523089966" class="cta call-btn">
-                    <svg class="phone-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" fill="currentColor"/>
+                    <svg class="phone-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z"
+                            fill="currentColor" />
                     </svg>
                     Call Now
                 </a>
@@ -352,8 +394,9 @@
         <section class="service-description">
             <h2>Safe School Transportation Services</h2>
             <div class="description-content">
-                <p>We provide professional and safe school transportation services in Dubai. Our focus is on ensuring students reach their schools and homes safely and on time.</p>
-                
+                <p>We provide professional and safe school transportation services in Dubai. Our focus is on ensuring
+                    students reach their schools and homes safely and on time.</p>
+
                 <h3>Our Services Include:</h3>
                 <ul>
                     <li>Daily school transportation</li>
@@ -513,14 +556,20 @@
             <p>Contact us to discuss your school transportation needs</p>
             <div class="cta-buttons">
                 <a href="https://wa.me/+971523089966" class="cta whatsapp-btn">
-                    <svg class="whatsapp-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 15.55C16.4 16.31 15.3 16.96 14.47 17.14C13.93 17.26 13.23 17.35 10.76 16.35C7.7 15.12 5.72 12.03 5.57 11.84C5.43 11.65 4.43 10.31 4.43 8.93C4.43 7.55 5.13 6.89 5.41 6.61C5.68 6.33 6.01 6.24 6.21 6.24C6.41 6.24 6.61 6.24 6.78 6.25C7.03 6.26 7.21 6.27 7.42 6.86C7.66 7.57 8.38 8.95 8.45 9.1C8.53 9.25 8.58 9.43 8.47 9.64C7.95 10.73 7.39 10.67 7.81 11.37C9.21 13.89 10.63 14.47 12.94 15.37C13.24 15.5 13.43 15.46 13.63 15.23C13.83 15 14.5 14.23 14.73 13.93C14.95 13.63 15.18 13.69 15.48 13.79C15.78 13.89 17.21 14.54 17.54 14.7C17.87 14.86 18.09 14.94 18.16 15.09C18.24 15.23 18.24 15.91 16.64 15.55Z" fill="currentColor"/>
+                    <svg class="whatsapp-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 15.55C16.4 16.31 15.3 16.96 14.47 17.14C13.93 17.26 13.23 17.35 10.76 16.35C7.7 15.12 5.72 12.03 5.57 11.84C5.43 11.65 4.43 10.31 4.43 8.93C4.43 7.55 5.13 6.89 5.41 6.61C5.68 6.33 6.01 6.24 6.21 6.24C6.41 6.24 6.61 6.24 6.78 6.25C7.03 6.26 7.21 6.27 7.42 6.86C7.66 7.57 8.38 8.95 8.45 9.1C8.53 9.25 8.58 9.43 8.47 9.64C7.95 10.73 7.39 10.67 7.81 11.37C9.21 13.89 10.63 14.47 12.94 15.37C13.24 15.5 13.43 15.46 13.63 15.23C13.83 15 14.5 14.23 14.73 13.93C14.95 13.63 15.18 13.69 15.48 13.79C15.78 13.89 17.21 14.54 17.54 14.7C17.87 14.86 18.09 14.94 18.16 15.09C18.24 15.23 18.24 15.91 16.64 15.55Z"
+                            fill="currentColor" />
                     </svg>
                     Register Now
                 </a>
                 <a href="tel:+971523089966" class="cta call-btn">
-                    <svg class="phone-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" fill="currentColor"/>
+                    <svg class="phone-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z"
+                            fill="currentColor" />
                     </svg>
                     Call for Details
                 </a>
@@ -546,4 +595,5 @@
             });
     </script>
 </body>
-</html> 
+
+</html>
