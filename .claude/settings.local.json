@@ -3,7 +3,8 @@
     "allow": [
       "Bash(ls -1 *.html)",
       "Bash(grep -E \"\\\\.\\(json|xml|txt|md\\)$\")",
-      "Bash(wc -l \"/d/Personal Project/vanservice\"/*.css)"
+      "Bash(wc -l \"/d/Personal Project/vanservice\"/*.css)",
+      "Bash(find 'D:\\\\Personal Project\\\\vanservice\\\\blog' -name *.html)"
     ]
   }
 }
