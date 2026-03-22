@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -1 *.html)",
+      "Bash(grep -E \"\\\\.\\(json|xml|txt|md\\)$\")",
+      "Bash(wc -l \"/d/Personal Project/vanservice\"/*.css)"
+    ]
+  }
+}
