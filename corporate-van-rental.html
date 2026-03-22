@@ -70,6 +70,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
+        /* CSS Variables Extension */
+        :root {
+            --white: #ffffff;
+            --light-bg: #f8f9fa;
+            --primary: #0EA5E9;
+            --accent: #F97316;
+            --green: #10B981;
+        }
+
         .hero-content h1 {
             font-size: 2.8rem;
             color: var(--white);
@@ -93,7 +102,7 @@
 
         .service-content h2 {
             font-size: 2.2rem;
-            color: var(--primary-color);
+            color: var(--primary);
             text-align: center;
             margin-bottom: 2rem;
             font-weight: 700;
@@ -110,13 +119,13 @@
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
-            background: var(--accent-color);
+            background: var(--accent);
             border-radius: 2px;
         }
 
         .service-content h3 {
             font-size: 1.5rem;
-            color: var(--primary-color);
+            color: var(--primary);
             margin-bottom: 1rem;
             font-weight: 600;
             text-align: center;
@@ -136,6 +145,32 @@
             color: var(--text-color);
             text-align: center;
             margin-bottom: 1rem;
+        }
+
+        .feature-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card h3 {
+            position: relative;
+            padding-top: 0.5rem;
         }
 
         .description-content ul,
@@ -160,7 +195,7 @@
             content: "•";
             position: absolute;
             left: 0;
-            color: var(--accent-color);
+            color: var(--accent);
             font-weight: bold;
         }
 
@@ -169,7 +204,7 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: var(--accent-color);
+            color: var(--green);
         }
 
         .corporate-hero {
@@ -188,8 +223,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, var(--primary-color) 0%, rgba(44, 62, 80, 0.8) 100%);
-            opacity: 0.85;
+            background: linear-gradient(135deg, var(--primary) 0%, rgba(14, 165, 233, 0.9) 100%);
+            opacity: 0.90;
             z-index: 1;
         }
 
@@ -215,7 +250,7 @@
 
         .price-card .price {
             font-size: 1.8rem;
-            color: var(--accent-color);
+            color: var(--accent);
             font-weight: 700;
             text-align: center;
             margin: 1rem 0;
@@ -244,6 +279,96 @@
             .service-content h3 {
                 font-size: 1.3rem;
             }
+        }
+
+        /* Grid Layouts */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .fleet-grid,
+        .pricing-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .features-grid,
+            .fleet-grid,
+            .pricing-table {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Service Sections */
+        .service-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .service-features,
+        .service-description,
+        .fleet-section,
+        .pricing-section,
+        .cta-section {
+            margin-bottom: 4rem;
+            padding: 2rem 0;
+        }
+
+        .description-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: var(--white);
+        }
+
+        .whatsapp-btn:hover {
+            background: #1fb855;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+        }
+
+        .call-btn {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .call-btn:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(249, 115, 22, 0.4);
         }
     </style>
 </head>
